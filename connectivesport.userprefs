@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Models/SportType.cs">
+    <Files>
+      <File FileName="connectivesport/Models/User.cs" Line="41" Column="75" />
+      <File FileName="connectivesport/AddUserActivity.cs" Line="72" Column="1" />
+      <File FileName="connectivesport/google-services.json" Line="1" Column="1" />
+      <File FileName="connectivesport/GcmService.cs" Line="49" Column="23" />
+      <File FileName="connectivesport/packages.config" Line="1" Column="1" />
+      <File FileName="connectivesport/PushHandlerBroadcastReceiver.cs" Line="22" Column="26" />
+      <File FileName="connectivesport/ToDoActivity.cs" Line="209" Column="16" />
+      <File FileName="connectivesport/ToDoItem.cs" Line="6" Column="20" />
+      <File FileName="connectivesport/ToDoItemAdapter.cs" Line="52" Column="1" />
+      <File FileName="connectivesport/UserManager.cs" Line="74" Column="25" />
+      <File FileName="connectivesport/Properties/AndroidManifest.xml" Line="8" Column="7" />
+      <File FileName="connectivesport/MyFirebaseIIDService.cs" Line="25" Column="3" />
+      <File FileName="connectivesport/Constants.cs" Line="15" Column="1" />
+      <File FileName="connectivesport/Models/Friend.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/Sport.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/SportMembership.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/Achievement.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/SportType.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="connectivesport" expanded="True">
+            <Node name="connectivesport" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True">
+                <Node name="ComponentReference" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="56" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="53" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="83" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="97" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="104" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="60" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/MyFirebaseIIDService.cs" relfile="connectivesport/MyFirebaseIIDService.cs" line="20" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/GcmService.cs" relfile="connectivesport/GcmService.cs" line="36" column="1" />
+      <Breakpoint file="/Users/minhbui/Projects/connectivesport/connectivesport/AddUserActivity.cs" relfile="connectivesport/AddUserActivity.cs" line="70" column="5" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.connectivesport PreferredExecutionTarget="Android.97f7f290" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

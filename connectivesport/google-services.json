@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "25395899329",
+    "firebase_url": "https://connectivesport.firebaseio.com",
+    "project_id": "connectivesport",
+    "storage_bucket": "connectivesport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25395899329:android:41f4f1d657be3a57",
+        "android_client_info": {
+          "package_name": "connectivesport.connectivesport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25395899329-fmgjfg3s146eg9n4o9godr4revpeal9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "connectivesport.connectivesport",
+            "certificate_hash": "73f1c308623edf0e7cf0bdebae8507a3a87c5230"
+          }
+        },
+        {
+          "client_id": "25395899329-n7da748bnmf2kc25lfv2fmqs1d0gasuq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ9n5IQBcR1VfRaQb7ez3IpsWcLMp2EF4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25395899329-n7da748bnmf2kc25lfv2fmqs1d0gasuq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -25,7 +25,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5cc34af8da4329e09bfedf090c42d5b99.PushHandlerBroadcastReceiver">
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5cc34af8da4329e09bfedf090c42d5b99.MyBroadcastReceiver">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
         <category android:name="connectivesport.connectivesport" />
@@ -39,6 +39,7 @@
         <category android:name="connectivesport.connectivesport" />
       </intent-filter>
     </receiver>
+    <service android:name="md5cc34af8da4329e09bfedf090c42d5b99.PushHandlerService" />
     <service android:name="md5cc34af8da4329e09bfedf090c42d5b99.MyFirebaseIIDService">
       <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />

@@ -67,7 +67,7 @@ namespace connectivesport
 
 				// Register for push notifications
 				Log.Info("MainActivity", "Registering...");
-				GcmClient.Register(this, PushHandlerBroadcastReceiver.SENDER_IDS);
+				GcmClient.Register(this, MyBroadcastReceiver.SENDER_IDS);
 				//GcmClient.UnRegister(this);
 			}
 			catch (Exception e)

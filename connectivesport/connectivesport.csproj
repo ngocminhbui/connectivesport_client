@@ -151,8 +151,7 @@
     <Compile Include="Models\UserHealthDetail.cs" />
     <Compile Include="Models\UserStatus.cs" />
     <Compile Include="AddUserActivity.cs" />
-    <Compile Include="PushHandlerBroadcastReceiver.cs" />
-    <Compile Include="GcmService.cs" />
+    <Compile Include="MyBroadcastReceiver.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="MyFirebaseIIDService.cs" />
     <Compile Include="Constants.cs" />

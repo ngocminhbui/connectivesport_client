@@ -17,6 +17,15 @@ using Firebase.Iid;
 using Android.Util;
 using Android.Gms.Common;
 
+
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices;
+using System.Net.Http;
+
 namespace connectivesport
 {
 	[Activity(MainLauncher = true,
@@ -42,8 +51,13 @@ namespace connectivesport
 			RegisterWithGCM();
 
 
-			Button AddUserButton = (Button)FindViewById(Resource.Id.buttonAdduser);
-			AddUserButton.Click += async (sender, e) =>
+            
+            InvokeAPI();
+           
+
+
+            Button AddUserButton = (Button)FindViewById(Resource.Id.buttonAdduser);
+			AddUserButton.Click += (sender, e) =>
 			{
 				UserManager usrmng = UserManager.DefaultManager;
 				var client = usrmng.CurrentClient;
@@ -57,7 +71,18 @@ namespace connectivesport
 
 		}
 
-		private void RegisterWithGCM()
+        private async Task InvokeAPI()
+        {
+            var client = new MobileServiceClient(Settings.ApplicationURL);
+            Dictionary<String, String> pr = new Dictionary<String, String>();
+            pr["athleteId"] = "6";
+
+            var ret = await client.InvokeApiAsync("SendTestPushNotification", HttpMethod.Get, pr);
+
+
+        }
+
+        private void RegisterWithGCM()
 		{
 			try
 			{

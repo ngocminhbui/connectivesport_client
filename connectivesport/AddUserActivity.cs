@@ -19,7 +19,7 @@ using Android.Gms.Common;
 
 namespace connectivesport
 {
-	[Activity(MainLauncher = true,
+	[Activity(
 			   Icon = "@drawable/ic_launcher", Label = "@string/app_name",
 			   Theme = "@style/AppTheme")]
 	public class AddUserActivity : Activity

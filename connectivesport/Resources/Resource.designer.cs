@@ -26,6 +26,7 @@ namespace connectivesport
 		
 		public static void UpdateIdValues()
 		{
+			global::FacebookMonoDroid.Resource.String.library_name = global::connectivesport.Resource.String.library_name;
 			global::Gcm.Client.Resource.String.library_name = global::connectivesport.Resource.String.library_name;
 		}
 		

@@ -1,123 +1,90 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using System;
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Gcm.Client;
-
-using Firebase.Messaging;
-using Firebase.Iid;
-using Android.Util;
-using Android.Gms.Common;
-
-
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
-using System.Net.Http;
+using connectivesport;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using Facebook;
 
 namespace connectivesport
 {
 	[Activity(MainLauncher = true,
 			   Icon = "@drawable/ic_launcher", Label = "@string/app_name",
 			   Theme = "@style/AppTheme")]
+
 	public class AddUserActivity : Activity
 	{
-		public static AddUserActivity CurrentActivity { get; private set; }
 
-		TextView msgText;
-		public static AddUserActivity instance;
-		protected override void OnCreate(Bundle savedInstanceState)
-		{
-			base.OnCreate(savedInstanceState);
+		public static MobileServiceClient client;
+		const string applicationURL = @"https://connectivesport.azurewebsites.net";
 
-			instance = this;
-			// Create your application here
-			SetContentView((Resource.Layout.Activity_Add_User));
+        private MobileServiceUser user;
 
-			msgText = FindViewById<TextView>(Resource.Id.msgText);
-			IsPlayServicesAvailable();	CurrentActivity = this;
-
-			RegisterWithGCM();
-
-
-            
-            InvokeAPI();
-           
-
-
-            Button AddUserButton = (Button)FindViewById(Resource.Id.buttonAdduser);
-			AddUserButton.Click += (sender, e) =>
-			{
-				UserManager usrmng = UserManager.DefaultManager;
-				var client = usrmng.CurrentClient;
-
-				var table = client.GetTable<User>();
-				table.InsertAsync(new User { Username = ((EditText)FindViewById(Resource.Id.userid)).Text.ToString()});
-				Toast.MakeText(this, "Added user", ToastLength.Long).Show();
-
-
-			};
-
-		}
-
-        private async Task InvokeAPI()
+        private async Task<bool> Authenticate()
         {
-            var client = new MobileServiceClient(Settings.ApplicationURL);
-            Dictionary<String, String> pr = new Dictionary<String, String>();
-            pr["athleteId"] = "6";
+            var success = false;
+            try
+            {
+                // Sign in with Facebook login using a server-managed flow.
+                user = await client.LoginAsync(this,
+                    MobileServiceAuthenticationProvider.Facebook);
 
-            var ret = await client.InvokeApiAsync("SendTestPushNotification", HttpMethod.Get, pr);
-
-
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                //CreateAndShowDialog(ex, "Authentication failed");
+            }
+            return success;
         }
 
-        private void RegisterWithGCM()
+        protected override async void OnCreate(Bundle bundle)
 		{
-			try
-			{
-				// Check to ensure everything's set up right
-				GcmClient.CheckDevice(this);
-				GcmClient.CheckManifest(this);
+			base.OnCreate(bundle);
+            var contextRef = Application.Context.GetSharedPreferences("localData", Android.Content.FileCreationMode.Append); 
+            if (contextRef.GetBoolean("IsLogin", false))
+            {
+                await Authenticate();
+                StartActivity(typeof(MainTab_Activity));
+            }
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.Activity_Add_User);
 
-				// Register for push notifications
-				Log.Info("MainActivity", "Registering...");
-				GcmClient.Register(this, MyBroadcastReceiver.SENDER_IDS);
-				//GcmClient.UnRegister(this);
-			}
-			catch (Exception e)
-			{
-			}
+			CurrentPlatform.Init();
+
+			// Create the client instance, using the mobile app backend URL.
+			client = new MobileServiceClient(applicationURL);
+
+			var UserTable = client.GetTable<User>();
+
+			Button addUser = (Button)FindViewById(Resource.Id.adduser);
+			addUser.Click += async (sender, e) => {
+                if (await Authenticate())
+                {
+                    string token = user.MobileServiceAuthenticationToken; 
+
+                    Newtonsoft.Json.Linq.JToken x = await client.InvokeApiAsync("/.auth/me");
+                    string s = (string)x[0]["access_token"];
+
+                    var contextEdit = contextRef.Edit();
+                    contextEdit.PutString("FBToken", s);
+                    contextEdit.PutBoolean("IsLogin", true);
+                    contextEdit.Commit();
+
+                    FacebookClient fb = new FacebookClient(s);
+                    JToken profile = JToken.Parse(fb.Get("me/?fields=picture,name,email").ToString());
+                    User nUser = new User() { Username = (string)profile["name"], AvatarURL = (string)profile["picture"]["data"]["url"], Email = (string)profile["email"], LastLocationX = 5.3, LastLocationY = 3.2, UserID = "def", LastLogin = DateTime.Now, RegistrationDate = DateTime.Now };
+                    await UserTable.InsertAsync(nUser);
+                    StartActivity(typeof(MainTab_Activity));
+                }
+			};
 		}
-		public bool IsPlayServicesAvailable()
-		{
-			int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
-			if (resultCode != ConnectionResult.Success)
-			{
-				if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
-					msgText.Text = GoogleApiAvailability.Instance.GetErrorString(resultCode);
-				else
-				{
-					msgText.Text = "This device is not supported";
-					Finish();
-				}
-				return false;
-			}
-			else
-			{
-				msgText.Text = "Google Play Services is available.";
-				return true;
-			}
-		}
-	}
+
+
+}
 }

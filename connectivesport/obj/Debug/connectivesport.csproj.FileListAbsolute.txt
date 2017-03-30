@@ -129,5 +129,7 @@ C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\android\assets\System.Run
 C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\res\layout\practice.xml
+C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\res\layout\connectband.xml
 C:\Users\QuocAn\Desktop\aaaa\connectivesport\obj\Debug\connectivesport.dll.mdb
 C:\Users\QuocAn\Desktop\aaaa\connectivesport\bin\Debug\connectivesport.dll.mdb

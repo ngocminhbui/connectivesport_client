@@ -21,6 +21,8 @@
       </intent-filter>
     </receiver>
     <service android:name="connectivesport.gcmservice" />
+    <activity android:label="BandConnect_Activity" android:name="md5cc34af8da4329e09bfedf090c42d5b99.BandConnect_Activity" />
+    <activity android:label="Practice" android:name="md5cc34af8da4329e09bfedf090c42d5b99.Practice" />
     <activity android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="md5cc34af8da4329e09bfedf090c42d5b99.AddUserActivity" />
     <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5cc34af8da4329e09bfedf090c42d5b99.MyBroadcastReceiver">
       <intent-filter>
@@ -42,14 +44,14 @@
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
       </intent-filter>
     </service>
-    <activity android:label="ConnectiveSport" android:theme="@style/AppTheme" android:name="md5cc34af8da4329e09bfedf090c42d5b99.MainActivity">
+    <activity android:label="ConnectiveSport" android:theme="@style/AppTheme" android:name="md5cc34af8da4329e09bfedf090c42d5b99.MainActivity" />
+    <activity android:label="AddGoalActivity" android:theme="@style/BaseTheme" android:name="md5cc34af8da4329e09bfedf090c42d5b99.AddGoalActivity" />
+    <activity android:label="LoginActivity" android:name="md5cc34af8da4329e09bfedf090c42d5b99.LoginActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="AddGoalActivity" android:theme="@style/BaseTheme" android:name="md5cc34af8da4329e09bfedf090c42d5b99.AddGoalActivity" />
-    <activity android:label="LoginActivity" android:name="md5cc34af8da4329e09bfedf090c42d5b99.LoginActivity" />
     <activity android:label="SplashScreenActivity" android:name="md5cc34af8da4329e09bfedf090c42d5b99.SplashScreenActivity" />
     <activity android:theme="@android:style/Theme.DeviceDefault.Panel" android:name="md508a2596c2278afa8acd2d73544a7e254.ActivityWrappedActionExtensions_WrappedActionActivity" />
     <activity android:label="Web Authenticator" android:name="md56beaf3ca16f9b29c56822643de3b05fa.FormAuthenticatorActivity" />

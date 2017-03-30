@@ -16,11 +16,12 @@ using Firebase.Messaging;
 using Firebase.Iid;
 using Android.Util;
 using Android.Gms.Common;
+using System.Threading.Tasks;
 
 namespace connectivesport
 {
 	[Activity(
-			   Icon = "@drawable/ic_launcher", Label = "@string/app_name",
+			   Icon = "@drawable/ic_launcher", MainLauncher = false, Label = "@string/app_name",
 			   Theme = "@style/AppTheme")]
 	public class AddUserActivity : Activity
 	{
@@ -57,7 +58,7 @@ namespace connectivesport
 
 		}
 
-		private void RegisterWithGCM()
+        private void RegisterWithGCM()
 		{
 			try
 			{

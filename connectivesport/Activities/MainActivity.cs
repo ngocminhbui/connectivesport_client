@@ -18,7 +18,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 namespace connectivesport
 {
-	[Activity(Label = "ConnectiveSport", MainLauncher = true, Theme = "@style/AppTheme")]
+	[Activity(Label = "ConnectiveSport", Theme = "@style/AppTheme")]
 	public class MainActivity : AppCompatActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)

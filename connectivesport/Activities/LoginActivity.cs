@@ -10,17 +10,49 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Microsoft.WindowsAzure.MobileServices;
+using System.Threading.Tasks;
 
 namespace connectivesport
 {
-	[Activity(Label = "LoginActivity")]
-	public class LoginActivity : Activity
+	[Activity(Label = "LoginActivity", MainLauncher = true)]
+    public class LoginActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Create your application here
+            SetContentView(Resource.Layout.activity_login);
+
+            Button login = (Button)FindViewById(Resource.Id.btnFacebook);
+            login.Click += async (sender , e) =>
+            {
+                bool result = await Authenticate();
+                if (result)
+                {
+                    StartActivity(typeof(MainActivity));
+                }
+            };
 		}
-	}
+
+        private MobileServiceUser user;
+
+        private async Task<bool> Authenticate()
+        {
+            var success = false;
+            try
+            {
+                // Sign in with Facebook login using a server-managed flow.
+                user = await UserManager.DefaultManager.CurrentClient.LoginAsync(this,
+                    MobileServiceAuthenticationProvider.Facebook);
+
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                //CreateAndShowDialog(ex, "Authentication failed");
+            }
+            return success;
+        }
+    }
 }

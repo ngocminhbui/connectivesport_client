@@ -26,7 +26,7 @@ namespace connectivesport
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.Practice);
+            SetContentView(Resource.Layout.practice);
             
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.SetTitle("Connect to a Microsoft Band");

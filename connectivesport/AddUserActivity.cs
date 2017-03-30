@@ -43,17 +43,17 @@ namespace connectivesport
 
 
 			Button AddUserButton = (Button)FindViewById(Resource.Id.buttonAdduser);
-			AddUserButton.Click += async (sender, e) =>
-			{
-				UserManager usrmng = UserManager.DefaultManager;
-				var client = usrmng.CurrentClient;
+			AddUserButton.Click += (sender, e) =>
+            {
+                UserManager usrmng = UserManager.DefaultManager;
+                var client = usrmng.CurrentClient;
 
-				var table = client.GetTable<User>();
-				table.InsertAsync(new User { Username = ((EditText)FindViewById(Resource.Id.userid)).Text.ToString()});
-				Toast.MakeText(this, "Added user", ToastLength.Long).Show();
+                var table = client.GetTable<User>();
+                table.InsertAsync(new User { Username = ((EditText)FindViewById(Resource.Id.userid)).Text.ToString() });
+                Toast.MakeText(this, "Added user", ToastLength.Long).Show();
 
 
-			};
+            };
 
 		}
 

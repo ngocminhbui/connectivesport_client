@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <ManifestDocuments>
+    <ManifestDocument>obj\Debug\__library_projects__\Microsoft.Band.Android\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Microsoft.Band.Android\library_project_imports\aapt\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Wikitude.SDK\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Wikitude.SDK\library_project_imports\aapt\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Android.Support.Animated.Vector.Drawable\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\AndroidManifest.xml</ManifestDocument>
@@ -22,8 +26,14 @@
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.GooglePlayServices.Basement\library_project_imports\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\__library_projects__\Xamarin.GooglePlayServices.Tasks\library_project_imports\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
-  <NativeLibraries />
+  <NativeLibraries>
+    <NativeLibrary>obj\Debug\__library_projects__\Wikitude.SDK\library_project_imports\jni\arm64-v8a\libarchitect.so</NativeLibrary>
+    <NativeLibrary>obj\Debug\__library_projects__\Wikitude.SDK\library_project_imports\jni\armeabi-v7a\libarchitect.so</NativeLibrary>
+    <NativeLibrary>obj\Debug\__library_projects__\Wikitude.SDK\library_project_imports\jni\x86\libarchitect.so</NativeLibrary>
+  </NativeLibraries>
   <Jars>
+    <Jar>obj\Debug\__library_projects__\Microsoft.Band.Android\library_project_imports\bin\classes.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Wikitude.SDK\library_project_imports\bin\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Xamarin.Android.Support.Animated.Vector.Drawable\library_project_imports\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\classes.jar</Jar>
     <Jar>obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\classes.jar</Jar>

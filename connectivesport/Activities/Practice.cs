@@ -40,26 +40,11 @@ namespace connectivesport
             
             Dialog dialog = alert.Create();
             dialog.Show();
-
-            TextView duration = (TextView)FindViewById(Resource.Id.duration);
-
+            
             time = new Timer();
             time.Interval = 1000;
-            time.Elapsed += (sender, e) =>
-            {
-                sec++;
-                if (sec >= 60)
-                {
-                    min++;
-                    sec -= 60;
-                }
-                if (min >= 60)
-                {
-                    hour++;
-                    min -= 60;
-                }
-                duration.Text = $"{hour}:{min}:{sec}";
-            };
+            time.Elapsed += new ElapsedEventHandler(t_Elapsed);
+            
 
             Button stop = (Button)FindViewById(Resource.Id.stop);
             Button start = (Button)FindViewById(Resource.Id.start);
@@ -72,6 +57,26 @@ namespace connectivesport
                 time.Stop();
             };
             
+        }
+
+        protected void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            sec++;
+            if (sec >= 60)
+            {
+                min++;
+                sec -= 60;
+            }
+            if (min >= 60)
+            {
+                hour++;
+                min -= 60;
+            }
+            RunOnUiThread(() =>
+            {
+                TextView duration = (TextView)FindViewById(Resource.Id.duration);
+                duration.Text = $"{hour}:{min}:{sec}";
+            });
         }
 
         private void Sensors_ReadingChanged(object sender, IBandSensorEventEventArgs<IBandCaloriesEvent> e)

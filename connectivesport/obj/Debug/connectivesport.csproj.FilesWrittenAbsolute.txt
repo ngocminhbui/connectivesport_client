@@ -81,3 +81,8 @@
 /Users/yoh/Projects/connectivesport_client/connectivesport/bin/Debug/Xamarin.Android.Support.v7.RecyclerView.dll
 /Users/yoh/Projects/connectivesport_client/connectivesport/bin/Debug/Xamarin.Android.Support.Transition.dll
 /Users/yoh/Projects/connectivesport_client/connectivesport/bin/Debug/Xamarin.Android.Support.Design.dll
+/Users/yoh/Projects/connectivesport_client/connectivesport/obj/Debug/res/drawable/shape_circle_button.xml
+/Users/yoh/Projects/connectivesport_client/connectivesport/obj/Debug/res/layout/button_circle_image.xml
+/Users/yoh/Projects/connectivesport_client/connectivesport/obj/Debug/res/layout/row_spinner_sport.xml
+/Users/yoh/Projects/connectivesport_client/connectivesport/obj/Debug/res/drawable/circular_progress_bar.xml
+/Users/yoh/Projects/connectivesport_client/connectivesport/obj/Debug/res/drawable/progress_bar_background.xml

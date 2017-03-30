@@ -11,9 +11,9 @@
 	<string name="bottom_friend">Friend</string>
 	<string name="bottom_goal">Goal</string>
 
-	<string name="planet_prompt">Choose a planet</string>
+	<string name="sport_prompt">Choose a sport</string>
 
-	<string-array name="planets_array">
+	    <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
         <item>Earth</item>

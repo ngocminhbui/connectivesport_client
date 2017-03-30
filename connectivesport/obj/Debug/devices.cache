@@ -12,4 +12,8 @@
     <ResultingAbi>armeabi-v7a</ResultingAbi>
     <SdkVersion>25</SdkVersion>
   </Device>
+  <Device id="QKEAKJAA5HL7WWPN">
+    <ResultingAbi>armeabi-v7a</ResultingAbi>
+    <SdkVersion>19</SdkVersion>
+  </Device>
 </Devices>

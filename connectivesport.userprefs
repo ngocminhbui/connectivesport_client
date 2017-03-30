@@ -1,18 +1,31 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/ToDoActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport_client Status">
     <Files>
-      <File FileName="connectivesport/Activities/MainActivity.cs" Line="9" Column="18" />
-      <File FileName="connectivesport/Resources/drawable/circular_progress_bar.xml" Line="13" Column="12" />
-      <File FileName="connectivesport/Activities/AddGoalActivity.cs" Line="84" Column="3" />
-      <File FileName="connectivesport/Resources/values/Strings.xml" Line="16" Column="39" />
-      <File FileName="connectivesport/ToDoActivity.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Activities/MapActivities/ViewSportShopActivity.cs" Line="51" Column="55" />
+      <File FileName="connectivesport/Adapters/FriendListMapAdapter.cs" Line="9" Column="8" />
+      <File FileName="connectivesport/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" Line="19" Column="58" />
+      <File FileName="connectivesport/Helpers/RequestWeb.cs" Line="41" Column="33" />
+      <File FileName="connectivesport/Helpers/RequestWebListenerInterface.cs" Line="6" Column="63" />
+      <File FileName="connectivesport_client Status" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>e</Value>
+          <Value>results</Value>
+          <Value>json</Value>
+          <Value>url</Value>
+          <Value>json</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nooop" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

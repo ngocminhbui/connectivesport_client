@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using connectivesport;
 using System.Diagnostics;
+using System.Timers;
 
 namespace connectivesport
 {
@@ -19,8 +20,8 @@ namespace connectivesport
     public class Practice : Activity
     {
         public static bool useBand = false;
-        long duration = 0;
-        Stopwatch time;
+        int sec = 0, min = 0, hour = 0;
+        Timer time;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,7 +41,25 @@ namespace connectivesport
             Dialog dialog = alert.Create();
             dialog.Show();
 
-            time = new Stopwatch();
+            TextView duration = (TextView)FindViewById(Resource.Id.duration);
+
+            time = new Timer();
+            time.Interval = 1000;
+            time.Elapsed += (sender, e) =>
+            {
+                sec++;
+                if (sec >= 60)
+                {
+                    min++;
+                    sec -= 60;
+                }
+                if (min >= 60)
+                {
+                    hour++;
+                    min -= 60;
+                }
+                duration.Text = $"{hour}:{min}:{sec}";
+            };
 
             Button stop = (Button)FindViewById(Resource.Id.stop);
             Button start = (Button)FindViewById(Resource.Id.start);
@@ -51,11 +70,8 @@ namespace connectivesport
             stop.Click += (sender, e) =>
             {
                 time.Stop();
-                TextView d = (TextView)FindViewById(Resource.Id.duration);
-                d.Text = time.ElapsedMilliseconds.ToString();
             };
             
-
         }
 
         private void Sensors_ReadingChanged(object sender, IBandSensorEventEventArgs<IBandCaloriesEvent> e)

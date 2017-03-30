@@ -30,7 +30,7 @@ namespace connectivesport
                 bool result = await Authenticate();
                 if (result)
                 {
-                    StartActivity(typeof(MainActivity));
+                    StartActivity(typeof(Practice));
                 }
             };
 		}

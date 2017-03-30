@@ -1,13 +1,19 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport_client Status">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="connectivesport/Activities/MapActivities/ViewSportShopActivity.cs" Line="51" Column="55" />
-      <File FileName="connectivesport/Adapters/FriendListMapAdapter.cs" Line="9" Column="8" />
-      <File FileName="connectivesport/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" Line="19" Column="58" />
-      <File FileName="connectivesport/Helpers/RequestWeb.cs" Line="41" Column="33" />
-      <File FileName="connectivesport/Helpers/RequestWebListenerInterface.cs" Line="6" Column="63" />
-      <File FileName="connectivesport_client Status" />
+      <File FileName="connectivesport/Activities/MapActivities/ViewSportShopActivity.cs" Line="104" Column="36" />
+      <File FileName="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" Line="49" Column="61" />
+      <File FileName="connectivesport/Models/Achievement.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/Challenge.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/EntityData.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/Goal.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/Sport.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/SportMembership.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/SportType.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/SportStore.cs" Line="65" Column="18" />
+      <File FileName="connectivesport/Models/User.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/UserHealthDetail.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/UserStatus.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -25,7 +31,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nooop" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.FAAZCY089549" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

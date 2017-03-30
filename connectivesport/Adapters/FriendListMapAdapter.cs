@@ -21,7 +21,7 @@ namespace connectivesport
 		{
 			get
 			{
-				return 19;//return friends.Count;
+				return friends.Count;
 			}
 		}
 

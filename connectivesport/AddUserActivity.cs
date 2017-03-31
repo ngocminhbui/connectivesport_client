@@ -16,11 +16,12 @@ using Firebase.Messaging;
 using Firebase.Iid;
 using Android.Util;
 using Android.Gms.Common;
+using System.Threading.Tasks;
 
 namespace connectivesport
 {
 	[Activity(
-			   Icon = "@drawable/ic_launcher", Label = "@string/app_name",
+			   Icon = "@drawable/ic_launcher", MainLauncher = false, Label = "@string/app_name",
 			   Theme = "@style/AppTheme")]
 	public class AddUserActivity : Activity
 	{
@@ -43,21 +44,21 @@ namespace connectivesport
 
 
 			Button AddUserButton = (Button)FindViewById(Resource.Id.buttonAdduser);
-			AddUserButton.Click += async (sender, e) =>
-			{
-				UserManager usrmng = UserManager.DefaultManager;
-				var client = usrmng.CurrentClient;
+			AddUserButton.Click += (sender, e) =>
+            {
+                UserManager usrmng = UserManager.DefaultManager;
+                var client = usrmng.CurrentClient;
 
-				var table = client.GetTable<User>();
-				table.InsertAsync(new User { Username = ((EditText)FindViewById(Resource.Id.userid)).Text.ToString()});
-				Toast.MakeText(this, "Added user", ToastLength.Long).Show();
+                var table = client.GetTable<User>();
+                table.InsertAsync(new User { Username = ((EditText)FindViewById(Resource.Id.userid)).Text.ToString() });
+                Toast.MakeText(this, "Added user", ToastLength.Long).Show();
 
 
-			};
+            };
 
 		}
 
-		private void RegisterWithGCM()
+        private void RegisterWithGCM()
 		{
 			try
 			{

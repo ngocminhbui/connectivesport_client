@@ -4,7 +4,7 @@
    
     <item android:id="@android:id/background">
         <shape
-			android:innerRadiusRatio="3.0"
+			android:innerRadiusRatio="2.3"
 			android:thicknessRatio="20.0"
 			android:useLevel="false"
 			android:shape="ring">
@@ -14,7 +14,7 @@
     <item android:id="@android:id/progress">
             <shape
 				android:shape="ring"
-				android:innerRadiusRatio="3.0"
+				android:innerRadiusRatio="2.3"
 				android:thicknessRatio="20.0">
                 <solid android:color="#00695C" />
                

@@ -39,16 +39,15 @@ namespace connectivesport
 			_cancelButton.Click += (sender, e) => OnBackPressed();
 
 			_saveButton.Click += (sender, e) => AddNewGoal();
-			Task.Run(async () =>
-			{
-				var a = new SportAdapter(this, await ListSportData());
+			//Task.Run(async () =>
+			//{
+			//	var a = new SportAdapter(this, await ListSportData());
 
-				spinner.Adapter = a;
-			});
+			//	spinner.Adapter = a;
+			//});
 
-			//var a = new SportAdapter(this, await ListSportData());
-
-			//spinner.Adapter = a;
+			var a = new SportAdapter(this, LocalDataManager.instance.lsSport);
+			spinner.Adapter = a;
 			spinner.ItemSelected += spinner_ItemSelected;
 
 			var adapter = ArrayAdapter.CreateFromResource(
@@ -59,18 +58,7 @@ namespace connectivesport
 
 			spinnerGoalTime.Adapter = adapter;
 
-			var progrssBarObj = FindViewById<ProgressBar>(Resource.Id.progressBarSync);
-			progrssBarObj.Max = 70;
-			progrssBarObj.Progress = 50;
-			//await Task.Run(() =>
-			//{
-			//	for (int i = 0; i < 100; i++)
-			//	{
-			//		int cnt = 0;
-			//		cnt = cnt + i;
-			//		progrssBarObj.Progress = cnt;
-			//	}
-			//});
+
 
 
 			//spinner.ItemSelected += onSpinnerGoalTypeSelected;
@@ -78,7 +66,7 @@ namespace connectivesport
 
 		void AddNewGoal()
 		{
-			throw new NotImplementedException();
+			//throw new NotImplementedException();
 			Finish();
 		}
 

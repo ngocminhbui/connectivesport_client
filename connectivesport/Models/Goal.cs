@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -18,14 +18,30 @@ namespace connectivesport
         [JsonProperty("Count")]
         public int? Count { get; set; }
 
+        [JsonProperty("CurrentCount")]
+        public int? Current_Count { get; set; }
+
+
         [JsonProperty("Length")]
         public double? Length { get; set; }
+
+        [JsonProperty("CurrentLength")]
+        public int? Current_Length { get; set; }
+
 
         [JsonProperty("Frequency")]
         public int? Frequency { get; set; }
 
+        [JsonProperty("CurrentFrequency")]
+        public int? Current_Frequency { get; set; }
+
         [JsonProperty("ProposedTime")]
         public DateTime? ProposedTime { get; set; }
+
+        [JsonProperty("CurrentProposedTime")]
+        public int? Current_ProposedTime { get; set; }
+
+
 
         [JsonProperty("DateAccepted")]
         public DateTime? DateAccepted { get; set; }

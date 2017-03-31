@@ -39,6 +39,12 @@ namespace connectivesport
 
 		Button buttonChallenge;
 
+		ProgressBar progrssBarObj;
+
+		TextView textViewGoalMessage;
+
+
+
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -49,33 +55,30 @@ namespace connectivesport
 
 			string goalID = Intent.GetStringExtra(GOAL_ID);
 
+			Goal goal = LocalDataManager.instance.getGoalById(goalID);
+
+			textViewGoalMessage = FindViewById<TextView>(Resource.Id.textViewGoalMessage);
+			textViewGoalMessage.Text = goal.CustomMessage;
+
+			progrssBarObj = FindViewById<ProgressBar>(Resource.Id.progressBarSync);
+			progrssBarObj.Max = goal.Count.Value;
+			progrssBarObj.Progress = goal.Current_Count.Value;
+
 			mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
 			mLayoutManager = new LinearLayoutManager(this);
 			mRecyclerView.SetLayoutManager(mLayoutManager);
 
-			mFriendList = ListFriendDemo();
+			mFriendList = LocalDataManager.instance.lsUser;
 			// Plug in my adapter:
-			mAdapter = new FriendGoalAdapter(mFriendList);
+			mAdapter = new FriendGoalAdapter(this,mFriendList);
 			mRecyclerView.SetAdapter(mAdapter);
 
 			buttonChallenge = FindViewById<Button>(Resource.Id.buttonChallenge);
 
 			buttonChallenge.Click += ButtonChallenge_Click;
 		}
-		List<User> ListFriendDemo()
-		{
-			List<User> lu = new List<User>();
 
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
 
-			return lu;
-		}
 	}
 }

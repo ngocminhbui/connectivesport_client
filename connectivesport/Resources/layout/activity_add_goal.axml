@@ -14,7 +14,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
-            android:text="@string/sport_prompt"
+            android:text="@string/goal_prompt"
             android:textSize="20dp" />
         <Spinner
             android:layout_width="match_parent"
@@ -22,16 +22,45 @@
             android:prompt="@string/sport_prompt"
             android:layout_marginTop="10dip"
             android:id="@+id/spinnerSport" />
-        <Spinner
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:id="@+id/spinnerGoalType" />
-        <Spinner
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/editTextVal"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:inputType="number" />
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:id="@+id/spinnerGoalType" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:id="@+id/spinnerGoalTime" />
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Each"
+                android:layout_gravity="center_vertical"
+                android:inputType="date"
+                android:layout_marginTop="10dip"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_medium_material" />
+            <Spinner
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dip"
+                android:id="@+id/spinnerGoalTime" />
+        </LinearLayout>
         <TextView
             android:text="Text"
             android:inputType="date"
@@ -39,28 +68,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textViewDate" />
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_height="wrap_content">
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_column="2"
-                android:id="@+id/progressBarSync"
-                android:layout_centerInParent="true"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:padding="10dp"
-                android:progressDrawable="@drawable/circular_progress_bar" />
-            <TextView
-                android:id="@+id/txtProgress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello"
-                android:layout_alignBottom="@+id/progressBarSync"
-                android:layout_centerInParent="true"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-        </RelativeLayout>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="wrap_content"

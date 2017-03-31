@@ -28,6 +28,7 @@ namespace connectivesport
 			base.OnCreate(savedInstanceState);
 
 			// Create your fragment here
+			mFriendList = LocalDataManager.instance.lsUser;
 		}
 
 		RecyclerView mRecyclerView;
@@ -58,8 +59,8 @@ namespace connectivesport
 			//	mRecyclerView.SetAdapter(mAdapter);
 			//});
 
-			mFriendList = ListFriendDemo();
-				mAdapter = new FriendAdapter(mFriendList);
+			// mFriendList = ListFriendDemo();
+				mAdapter = new FriendAdapter(this.Activity, mFriendList);
 				mRecyclerView.SetAdapter(mAdapter);
 
 

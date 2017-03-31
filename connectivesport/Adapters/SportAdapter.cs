@@ -43,7 +43,8 @@ namespace connectivesport
 			var sportImage = view.FindViewById<ImageView>(Resource.Id.SportImage);
 
 			sportName.Text = _sportList[position].Name;
-			sportImage.SetImageResource(Resource.Drawable.abc_ic_star_black_48dp);
+			var drawableImage = _activity.Resources.GetIdentifier(_sportList[position].ImageUrl, "drawable", _activity.PackageName);
+			sportImage.SetImageResource(drawableImage);
 			return view;
 		}
 	}

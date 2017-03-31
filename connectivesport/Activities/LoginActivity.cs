@@ -17,7 +17,7 @@ using Newtonsoft.Json.Linq;
 
 namespace connectivesport
 {
-	[Activity(Label = "LoginActivity", MainLauncher = true)]
+	[Activity(Label = "LoginActivity", MainLauncher = false)]
     public class LoginActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)

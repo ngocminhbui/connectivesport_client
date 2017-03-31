@@ -23,7 +23,7 @@ namespace connectivesport
 		RecyclerView mRecyclerView;
 		RecyclerView.LayoutManager mLayoutManager;
 		GoalAdapter mAdapter;
-		GoalList mGoalList;
+		List<Goal> mGoalList;
 		FloatingActionButton mbutton;
 
 		public static HomeFragment NewInstance()
@@ -37,7 +37,7 @@ namespace connectivesport
 			base.OnCreate(savedInstanceState);
 
 			// Create your fragment here
-			mGoalList = new GoalList();
+			mGoalList = LocalDataManager.instance.lsGoal;
 
 		}
 
@@ -52,7 +52,7 @@ namespace connectivesport
 			mRecyclerView.SetLayoutManager(mLayoutManager);
 
 			// Plug in my adapter:
-			mAdapter = new GoalAdapter(mGoalList);
+			mAdapter = new GoalAdapter(this.Activity, mGoalList);
 			mRecyclerView.SetAdapter(mAdapter);
 
 			mRecyclerView.SetItemClickListener((rv, position, view) =>

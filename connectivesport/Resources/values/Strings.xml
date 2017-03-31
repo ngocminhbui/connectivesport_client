@@ -12,7 +12,8 @@
 	<string name="bottom_profile">Profile</string>
 
 	<string name="sport_prompt">Choose a sport</string>
-
+	<string name="goal_prompt">Your Goal</string>
+	
 	    <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>

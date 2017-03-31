@@ -56,8 +56,8 @@ namespace connectivesport
 			//	mRecyclerView.SetAdapter(mAdapter);
 			//});
 
-			mFriendList = ListFriendDemo();
-			mAdapter = new FriendAdapter(mFriendList);
+			mFriendList = LocalDataManager.instance.lsUser;
+			mAdapter = new FriendAdapter(this.Activity,mFriendList);
 			mRecyclerView.SetAdapter(mAdapter);
 
 			mRecyclerView.SetItemClickListener((rv, position, view) =>
@@ -73,19 +73,5 @@ namespace connectivesport
 
 		}
 
-		List<User> ListFriendDemo()
-		{
-			List<User> lu = new List<User>();
-
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-
-			return lu;
-		}
 	}
 }

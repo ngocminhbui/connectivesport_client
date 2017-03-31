@@ -19,5 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
+        android:tint="#FFFFFF"
+        android:background="#673AB7"
+        android:src="@drawable/ic_add_black_48dp"
         android:id="@+id/floatingActionButton" />
 </android.support.design.widget.CoordinatorLayout>

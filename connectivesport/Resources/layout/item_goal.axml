@@ -6,6 +6,8 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal">
@@ -14,7 +16,7 @@
             android:layout_width="70dp"
             android:layout_gravity="center"
             android:layout_height="match_parent"
-            android:id="@+id/imageView1" />
+            android:id="@+id/imageViewSport" />
         <TextView
             android:text="Text"
             android:layout_width="0dp"
@@ -32,8 +34,8 @@
                 android:layout_column="2"
                 android:layout_gravity="center"
                 android:id="@+id/progressBarSync"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_centerInParent="true"
                 android:progressDrawable="@drawable/circular_progress_bar" />
             <TextView

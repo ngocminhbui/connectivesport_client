@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Fragments/HomeFragment.cs">
     <Files>
       <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="34" Column="1" />
       <File FileName="connectivesport/Fragments/UserFragment.cs" Line="50" Column="4" />
@@ -10,34 +10,12 @@
       <File FileName="connectivesport/Adapters/MedalAdapter.cs" Line="35" Column="14" />
       <File FileName="connectivesport/Adapters/FriendAdapter.cs" Line="35" Column="14" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="connectivesport" expanded="True">
-            <Node name="connectivesport" expanded="True">
-              <Node name="Activities" expanded="True" />
-              <Node name="Adapters" expanded="True">
-                <Node name="FriendAdapter.cs" selected="True" />
-              </Node>
-              <Node name="Fragments" expanded="True" />
-              <Node name="Helpers" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
-                <Node name="menu" expanded="True" />
-                <Node name="values" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.97f7f290" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

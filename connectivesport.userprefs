@@ -1,32 +1,15 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Fragments/HomeFragment.cs">
     <Files>
       <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="62" Column="33" />
       <File FileName="connectivesport/Fragments/UserFragment.cs" Line="50" Column="4" />
-      <File FileName="connectivesport/Activities/MainActivity.cs" Line="41" Column="6" />
+      <File FileName="connectivesport/Activities/MainActivity.cs" Line="41" Column="33" />
       <File FileName="connectivesport/Resources/menu/bottom_navigation_menu.xml" Line="15" Column="8" />
       <File FileName="connectivesport/Resources/values/Strings.xml" Line="12" Column="48" />
       <File FileName="connectivesport/Fragments/FriendFragment.cs" Line="39" Column="26" />
       <File FileName="connectivesport/Adapters/MedalAdapter.cs" Line="35" Column="14" />
       <File FileName="connectivesport/Adapters/FriendAdapter.cs" Line="35" Column="14" />
-      <File FileName="connectivesport/Activities/AR_Activity.cs" Line="12" Column="11" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="connectivesport" expanded="True">
-            <Node name="connectivesport" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="ComponentReferenceFolder" expanded="True" />
-              <Node name="Packages" expanded="True" />
-              <Node name="Fragments" expanded="True" />
-              <Node name="Helper" expanded="True" />
-              <Node name="Helpers" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

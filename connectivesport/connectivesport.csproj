@@ -177,7 +177,6 @@
     <Compile Include="Models\UserStatus.cs" />
     <Compile Include="AddUserActivity.cs" />
     <Compile Include="MyBroadcastReceiver.cs" />
-    <Compile Include="UserManager.cs" />
     <Compile Include="MyFirebaseIIDService.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Activities\MainActivity.cs" />
@@ -196,6 +195,9 @@
     <Compile Include="Adapters\FriendListMapAdapter.cs" />
     <Compile Include="Activities\MapActivities\ViewSportShopActivity.cs" />
     <Compile Include="Models\SportStore.cs" />
+    <Compile Include="Models\AchievementManager.cs" />
+    <Compile Include="Models\ChallengeManager.cs" />
+    <Compile Include="Models\UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

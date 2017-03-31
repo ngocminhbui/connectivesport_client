@@ -41,16 +41,18 @@ namespace connectivesport
 		{
 			Contract.Ensures(Contract.Result<Task>() != null);
 			ListView lv_friendlist = (ListView)FindViewById(Resource.Id.listview_friendlistmap);
-			List<User> friends = await UserManager.DefaultManager.CurrentClient.GetTable<User>().ToListAsync();
+
 			try
 			{
+			var friends = await UserManager.DefaultManager.GetUsersAsync(true);
+
 				foreach (var f in friends)
 				{
 					if (f.LastLocationX != null && f.LastLocationY != null)
 						map.AddMarker(new Android.Gms.Maps.Model.MarkerOptions().SetPosition(new Android.Gms.Maps.Model.LatLng(3, 3)).SetTitle(f.Username).SetSnippet("Practicing"));
 				}
 
-				FriendListMapAdapter adp = new FriendListMapAdapter(this, friends);
+				FriendListMapAdapter adp = new FriendListMapAdapter(this, friends.ToList());
 				lv_friendlist.Adapter = adp;
 				lv_friendlist.ItemClick += (sender, e) =>
 				{

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -12,15 +12,15 @@ using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Fragment = Android.Support.V4.App.Fragment;
-using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
+using connectivesport.Helpers;
 namespace connectivesport
 {
-	public class FriendFragment : Fragment
+	public class FriendDialogFragment : DialogFragment
 	{
-		public static FriendFragment NewInstance()
+
+		public static FriendDialogFragment NewInstance()
 		{
-			FriendFragment fragment = new FriendFragment();
+			FriendDialogFragment fragment = new FriendDialogFragment();
 			return fragment;
 		}
 		public override void OnCreate(Bundle savedInstanceState)
@@ -37,15 +37,13 @@ namespace connectivesport
 		FriendAdapter mAdapter;
 
 		List<User> mFriendList;
-
-
-
-
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			// Use this to return your custom view for this Fragment
 			// return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-			var rootView = inflater.Inflate(Resource.Layout.fragment_friend, container, false);
+			var goalID = Arguments.GetString("goalID");
+
+			var rootView = inflater.Inflate(Resource.Layout.dialog_fragment_friend_list, container, false);
 			mRecyclerView = rootView.FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
 			mLayoutManager = new LinearLayoutManager(this.Activity);
@@ -59,14 +57,21 @@ namespace connectivesport
 			//});
 
 			mFriendList = ListFriendDemo();
-				mAdapter = new FriendAdapter(mFriendList);
-				mRecyclerView.SetAdapter(mAdapter);
+			mAdapter = new FriendAdapter(mFriendList);
+			mRecyclerView.SetAdapter(mAdapter);
 
+			mRecyclerView.SetItemClickListener((rv, position, view) =>
+			{
+				//An item has been clicked
+				// Context context = view.Context;
+				// Intent intent = new Intent(context, typeof(GoalDetailsActivity));
+				//intent.PutExtra(GoalDetailsActivity.EXTRA_NAME, values[position]);
 
+				Dismiss();
+			});
 			return rootView;
 
 		}
-
 
 		List<User> ListFriendDemo()
 		{
@@ -81,10 +86,6 @@ namespace connectivesport
 			lu.Add(new User { Username = "Luong Quoc An" });
 
 			return lu;
-		}
-		async Task<List<User>> ListFriendData()
-		{
-			return await UserManager.DefaultManager.CurrentClient.GetTable<User>().ToListAsync();
 		}
 	}
 }

@@ -12,6 +12,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
+using connectivesport.Helpers;
 using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
@@ -54,6 +55,15 @@ namespace connectivesport
 			mAdapter = new GoalAdapter(mGoalList);
 			mRecyclerView.SetAdapter(mAdapter);
 
+			mRecyclerView.SetItemClickListener((rv, position, view) =>
+			{
+				//An item has been clicked
+				Context context = view.Context;
+				Intent intent = new Intent(context, typeof(GoalDetailsActivity));
+				intent.PutExtra(GoalDetailsActivity.GOAL_ID, mGoalList[position].Id);
+
+				context.StartActivity(intent);
+			});
 			mbutton = rootView.FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
 			mbutton.Click += AddNewGoal;
 				

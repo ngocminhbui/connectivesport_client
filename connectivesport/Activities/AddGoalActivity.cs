@@ -22,7 +22,7 @@ namespace connectivesport
 		Button _cancelButton;
 		Button _saveButton;
 		Goal _goal;
-		protected async override void OnCreate(Bundle savedInstanceState)
+		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
@@ -39,16 +39,16 @@ namespace connectivesport
 			_cancelButton.Click += (sender, e) => OnBackPressed();
 
 			_saveButton.Click += (sender, e) => AddNewGoal();
-			//await Task.Run(async () =>
-			//{
-			//	var a = new SportAdapter(this, await ListSportData());
+			Task.Run(async () =>
+			{
+				var a = new SportAdapter(this, await ListSportData());
 
-			//	spinner.Adapter = a;
-			//});
+				spinner.Adapter = a;
+			});
 
-			var a = new SportAdapter(this, await ListSportData());
+			//var a = new SportAdapter(this, await ListSportData());
 
-			spinner.Adapter = a;
+			//spinner.Adapter = a;
 			spinner.ItemSelected += spinner_ItemSelected;
 
 			var adapter = ArrayAdapter.CreateFromResource(

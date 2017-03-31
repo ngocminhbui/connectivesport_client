@@ -18,7 +18,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 namespace connectivesport
 {
-	[Activity(Label = "ConnectiveSport", MainLauncher = true, Theme = "@style/AppTheme")]
+	[Activity(Label = "ConnectiveSport", MainLauncher = true, Theme = "@style/BaseTheme")]
 	public class MainActivity : AppCompatActivity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -39,12 +39,16 @@ namespace connectivesport
 				{
 
 					case Resource.Id.home_item:
-						Toast.MakeText(this, "home click", ToastLength.Short).Show();
+						//Toast.MakeText(this, "home click", ToastLength.Short).Show();
 						selectedFragment = HomeFragment.NewInstance();
 						break;
 					case Resource.Id.friend_item:
-						Toast.MakeText(this, "friend click", ToastLength.Short).Show();
+						//Toast.MakeText(this, "friend click", ToastLength.Short).Show();
 						selectedFragment = FriendFragment.NewInstance();
+						break;
+					case Resource.Id.profile_item:
+						//Toast.MakeText(this, "friend click", ToastLength.Short).Show();
+						selectedFragment = UserFragment.NewInstance();
 						break;
 				}
 				FragmentTransaction transaction = SupportFragmentManager.BeginTransaction();

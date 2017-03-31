@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_nav_item"
         android:title="@string/bottom_friend"/>
     <item
-        android:id="@+id/goal_item"
+        android:id="@+id/profile_item"
         android:icon="@drawable/ic_nav_item"
-        android:title="@string/bottom_goal"/>
+        android:title="@string/bottom_profile"/>
 </menu>

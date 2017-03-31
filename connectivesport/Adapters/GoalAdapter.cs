@@ -44,7 +44,7 @@ namespace connectivesport
 		public GoalViewHolder(View itemView) : base(itemView)
 		{
 			Text = itemView.FindViewById<TextView>(Resource.Id.textView);
-			// itemView.Click += (sender, e) => listener(base.Position);
+			//itemView.Click += (sender, e) => listener(base.Position);
 		}
 	}
 }

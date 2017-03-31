@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Fragments/HomeFragment.cs">
     <Files>
-      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="34" Column="1" />
+      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="62" Column="33" />
       <File FileName="connectivesport/Fragments/UserFragment.cs" Line="50" Column="4" />
       <File FileName="connectivesport/Activities/MainActivity.cs" Line="41" Column="33" />
       <File FileName="connectivesport/Resources/menu/bottom_navigation_menu.xml" Line="15" Column="8" />

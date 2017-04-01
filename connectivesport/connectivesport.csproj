@@ -277,6 +277,13 @@
     <AndroidResource Include="Resources\drawable\storemarker50.png" />
     <AndroidResource Include="Resources\drawable\gym.png" />
     <AndroidResource Include="Resources\drawable\addgoalbanner.png" />
+    <AndroidResource Include="Resources\drawable\medal3.png" />
+    <AndroidResource Include="Resources\drawable\medal4.png" />
+    <AndroidResource Include="Resources\drawable\medal5.png" />
+    <AndroidResource Include="Resources\drawable\medal6.png" />
+    <AndroidResource Include="Resources\drawable\medal7.png" />
+    <AndroidResource Include="Resources\drawable\medal15.png" />
+    <AndroidResource Include="Resources\drawable\medal14.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

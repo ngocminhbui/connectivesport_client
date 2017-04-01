@@ -48,7 +48,7 @@ namespace connectivesport
 		private List<Medal> loadMedal()
         {
             List<Medal> result = new List<Medal>();
-            Medal m1 = new Medal { Name = "First Achievement", Id = "md1", ImageURL = "", Description = "first medal" };
+            Medal m1 = new Medal { Name = "First Achievement", Id = "md1", ImageURL = "medal6", Description = "first medal" };
             result.Add(m1);
 
             return result;

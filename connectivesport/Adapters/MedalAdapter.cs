@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android.App;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
@@ -9,8 +10,10 @@ namespace connectivesport
 	public class MedalAdapter:RecyclerView.Adapter
 	{
 		List<Medal> _medalList;
-		public MedalAdapter(List<Medal> medalList)
+		Activity _activity;
+		public MedalAdapter(Activity activity, List<Medal> medalList)
 		{
+			_activity = activity;
 			_medalList = medalList;
 		}
 
@@ -26,12 +29,14 @@ namespace connectivesport
 		{
 			var vh = holder as MedalViewHolder;
 			vh.Text.Text = _medalList[position].Name;
+			var drawableImage = _activity.Resources.GetIdentifier(_medalList[position].ImageURL, "drawable", _activity.PackageName);
+			vh.image.SetImageResource(drawableImage);
 		}
 
 		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
 		{
 			View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.item_medal, parent, false);
-			var vh = new FriendViewHolder(itemView);
+			var vh = new MedalViewHolder(itemView);
 			return vh;
 		}
 	}
@@ -39,9 +44,14 @@ namespace connectivesport
 	{
 		public TextView Text { get; private set; }
 
+		public ImageView image { get; private set; }
+
+
+
 		public MedalViewHolder(View itemView) : base(itemView)
 		{
 			Text = itemView.FindViewById<TextView>(Resource.Id.textViewName);
+			image = itemView.FindViewById<ImageView>(Resource.Id.imageViewMedal);
 			// itemView.Click += (sender, e) => listener(base.Position);
 		}
 	}

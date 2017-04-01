@@ -5,8 +5,9 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/imageViewMedal"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_margin="5dp" />
     <TextView
         android:id="@+id/textViewName"

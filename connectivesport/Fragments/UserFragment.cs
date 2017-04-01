@@ -29,13 +29,17 @@ namespace connectivesport
 			base.OnCreate(savedInstanceState);
 
 			// Create your fragment here
+			mMedalList = LocalDataManager.instance.lsMedal;
 		}
 
 		RecyclerView mRecyclerView;
 
-		LinearLayoutManager mLayoutManager;
-
+		GridLayoutManager mLayoutManager;
+		 
 		List<Medal> mMedalList;
+
+		MedalAdapter mAdapter;
+
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
@@ -45,11 +49,13 @@ namespace connectivesport
 			var rootView = inflater.Inflate(Resource.Layout.user_profile, container, false);
 			mRecyclerView = rootView.FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
-			mLayoutManager = new LinearLayoutManager(this.Activity);
+			mLayoutManager = new GridLayoutManager(this.Activity,3);
 			mRecyclerView.SetLayoutManager(mLayoutManager);
 
 			// Plug in my adapter:
 
+			mAdapter = new MedalAdapter(this.Activity, mMedalList);
+			mRecyclerView.SetAdapter(mAdapter);
 
 			return rootView;
 		}

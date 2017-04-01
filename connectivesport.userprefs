@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Activities/AddGoalActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Fragments/UserFragment.cs">
     <Files>
-      <File FileName="connectivesport/Resources/drawable/circular_progress_bar.xml" Line="1" Column="1" />
-      <File FileName="connectivesport/Activities/AddGoalActivity.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Adapters/MedalAdapter.cs" Line="34" Column="4" />
+      <File FileName="connectivesport/Helper/LocalDataManager.cs" Line="51" Column="94" />
+      <File FileName="connectivesport/Adapters/FriendAdapter.cs" Line="57" Column="47" />
+      <File FileName="connectivesport/Fragments/UserFragment.cs" Line="55" Column="4" />
+      <File FileName="connectivesport/Fragments/FriendFragment.cs" Line="65" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-
   <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.DLE" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
-
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

@@ -2336,17 +2336,18 @@ namespace connectivesport
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int avatar_an = 2130837587;
+			public const int addgoalbanner = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int avatar_le = 2130837588;
+			public const int avatar_an = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int avatar_minh = 2130837589;
+			public const int avatar_le = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int avd_hide_password = 2130837590;
+			public const int avatar_minh = 2130837590;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020094
 			public const int avd_hide_password_1 = 2130837652;
 			
@@ -2355,10 +2356,21 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f020096
 			public const int avd_hide_password_3 = 2130837654;
-			
+=======
 			// aapt resource value: 0x7f020057
-			public const int avd_show_password = 2130837591;
+			public const int avd_hide_password = 2130837591;
 			
+			// aapt resource value: 0x7f02009a
+			public const int avd_hide_password_1 = 2130837658;
+			
+			// aapt resource value: 0x7f02009b
+			public const int avd_hide_password_2 = 2130837659;
+>>>>>>> origin/minh_ui
+			
+			// aapt resource value: 0x7f02009c
+			public const int avd_hide_password_3 = 2130837660;
+			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f020097
 			public const int avd_show_password_1 = 2130837655;
 			
@@ -2367,15 +2379,32 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f020099
 			public const int avd_show_password_3 = 2130837657;
-			
+=======
 			// aapt resource value: 0x7f020058
-			public const int blank_profile_picture = 2130837592;
+			public const int avd_show_password = 2130837592;
+			
+			// aapt resource value: 0x7f02009d
+			public const int avd_show_password_1 = 2130837661;
+			
+			// aapt resource value: 0x7f02009e
+			public const int avd_show_password_2 = 2130837662;
+>>>>>>> origin/minh_ui
+			
+			// aapt resource value: 0x7f02009f
+			public const int avd_show_password_3 = 2130837663;
 			
 			// aapt resource value: 0x7f020059
+<<<<<<< HEAD
 			public const int border_button = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
 			public const int calories = 2130837594;
+=======
+			public const int band = 2130837593;
+			
+			// aapt resource value: 0x7f02005a
+			public const int blank_profile_picture = 2130837594;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f02005b
 			public const int circular_image = 2130837595;
@@ -2447,6 +2476,7 @@ namespace connectivesport
 			public const int common_google_signin_btn_text_light_pressed = 2130837617;
 			
 			// aapt resource value: 0x7f020072
+<<<<<<< HEAD
 			public const int design_bottom_navigation_item_background = 2130837618;
 			
 			// aapt resource value: 0x7f020073
@@ -2547,6 +2577,126 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f020091
 			public const int steps = 2130837649;
+=======
+			public const int coverimage = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int design_bottom_navigation_item_background = 2130837619;
+			
+			// aapt resource value: 0x7f020074
+			public const int design_fab_background = 2130837620;
+			
+			// aapt resource value: 0x7f020075
+			public const int design_ic_visibility = 2130837621;
+			
+			// aapt resource value: 0x7f020076
+			public const int design_ic_visibility_off = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int design_password_eye = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int design_snackbar_background = 2130837624;
+			
+			// aapt resource value: 0x7f020079
+			public const int friendbanner = 2130837625;
+			
+			// aapt resource value: 0x7f02007a
+			public const int gym = 2130837626;
+			
+			// aapt resource value: 0x7f02007b
+			public const int homebanner = 2130837627;
+			
+			// aapt resource value: 0x7f02007c
+			public const int ic_add_black_48dp = 2130837628;
+			
+			// aapt resource value: 0x7f02007d
+			public const int ic_home_black_48dp = 2130837629;
+			
+			// aapt resource value: 0x7f02007e
+			public const int ic_launcher = 2130837630;
+			
+			// aapt resource value: 0x7f02007f
+			public const int ic_nav_item = 2130837631;
+			
+			// aapt resource value: 0x7f020080
+			public const int ic_people_black_48dp = 2130837632;
+			
+			// aapt resource value: 0x7f020081
+			public const int ic_person_black_48dp = 2130837633;
+			
+			// aapt resource value: 0x7f020082
+			public const int navigation_empty_icon = 2130837634;
+			
+			// aapt resource value: 0x7f020083
+			public const int notification_action_background = 2130837635;
+			
+			// aapt resource value: 0x7f020084
+			public const int notification_bg = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int notification_bg_low = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int notification_bg_low_normal = 2130837638;
+			
+			// aapt resource value: 0x7f020087
+			public const int notification_bg_low_pressed = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int notification_bg_normal = 2130837640;
+			
+			// aapt resource value: 0x7f020089
+			public const int notification_bg_normal_pressed = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int notification_icon_background = 2130837642;
+			
+			// aapt resource value: 0x7f020098
+			public const int notification_template_icon_bg = 2130837656;
+			
+			// aapt resource value: 0x7f020099
+			public const int notification_template_icon_low_bg = 2130837657;
+			
+			// aapt resource value: 0x7f02008b
+			public const int notification_tile_bg = 2130837643;
+			
+			// aapt resource value: 0x7f02008c
+			public const int notify_panel_notification_icon_bg = 2130837644;
+			
+			// aapt resource value: 0x7f02008d
+			public const int places_ic_clear = 2130837645;
+			
+			// aapt resource value: 0x7f02008e
+			public const int places_ic_search = 2130837646;
+			
+			// aapt resource value: 0x7f02008f
+			public const int powered_by_google_dark = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int powered_by_google_light = 2130837648;
+			
+			// aapt resource value: 0x7f020091
+			public const int profile_circular_border_imageview = 2130837649;
+			
+			// aapt resource value: 0x7f020092
+			public const int shape_circle_button = 2130837650;
+			
+			// aapt resource value: 0x7f020093
+			public const int sport4 = 2130837651;
+			
+			// aapt resource value: 0x7f020094
+			public const int storemarker = 2130837652;
+			
+			// aapt resource value: 0x7f020095
+			public const int storemarker50 = 2130837653;
+			
+			// aapt resource value: 0x7f020096
+			public const int timer = 2130837654;
+			
+			// aapt resource value: 0x7f020097
+			public const int timeroff = 2130837655;
+>>>>>>> origin/minh_ui
 			
 			static Drawable()
 			{
@@ -2561,9 +2711,10 @@ namespace connectivesport
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c008d
-			public const int LinearLayout1 = 2131493005;
+			// aapt resource value: 0x7f0c008e
+			public const int LinearLayout1 = 2131493006;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00da
 			public const int SportImage = 2131493082;
 			
@@ -2572,6 +2723,16 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00ba
 			public const int action0 = 2131493050;
+=======
+			// aapt resource value: 0x7f0c00dc
+			public const int SportImage = 2131493084;
+			
+			// aapt resource value: 0x7f0c00dd
+			public const int SportName = 2131493085;
+			
+			// aapt resource value: 0x7f0c00bb
+			public const int action0 = 2131493051;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c006e
 			public const int action_bar = 2131492974;
@@ -2594,17 +2755,30 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c004b
 			public const int action_bar_title = 2131492939;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00b7
 			public const int action_container = 2131493047;
+=======
+			// aapt resource value: 0x7f0c00b8
+			public const int action_container = 2131493048;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c006f
 			public const int action_context_bar = 2131492975;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00be
 			public const int action_divider = 2131493054;
 			
 			// aapt resource value: 0x7f0c00b8
 			public const int action_image = 2131493048;
+=======
+			// aapt resource value: 0x7f0c00bf
+			public const int action_divider = 2131493055;
+			
+			// aapt resource value: 0x7f0c00b9
+			public const int action_image = 2131493049;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0005
 			public const int action_menu_divider = 2131492869;
@@ -2621,11 +2795,19 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c004d
 			public const int action_mode_close_button = 2131492941;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00b9
 			public const int action_text = 2131493049;
 			
 			// aapt resource value: 0x7f0c00c7
 			public const int actions = 2131493063;
+=======
+			// aapt resource value: 0x7f0c00ba
+			public const int action_text = 2131493050;
+			
+			// aapt resource value: 0x7f0c00c8
+			public const int actions = 2131493064;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c004e
 			public const int activity_chooser_view_content = 2131492942;
@@ -2648,14 +2830,19 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0046
 			public const int always = 2131492934;
 			
-			// aapt resource value: 0x7f0c0092
-			public const int architectView = 2131493010;
+			// aapt resource value: 0x7f0c0093
+			public const int architectView = 2131493011;
 			
 			// aapt resource value: 0x7f0c0019
 			public const int auto = 2131492889;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00e9
 			public const int band_connect = 2131493097;
+=======
+			// aapt resource value: 0x7f0c00d7
+			public const int bandimg = 2131493079;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0044
 			public const int beginning = 2131492932;
@@ -2663,41 +2850,49 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0021
 			public const int bottom = 2131492897;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int bottomNavigationView = 2131493003;
+			// aapt resource value: 0x7f0c008c
+			public const int bottomNavigationView = 2131493004;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int btnFacebook = 2131492999;
+			// aapt resource value: 0x7f0c0088
+			public const int btnFacebook = 2131493000;
 			
-			// aapt resource value: 0x7f0c0090
-			public const int buttonAddToDo = 2131493008;
+			// aapt resource value: 0x7f0c0091
+			public const int buttonAddToDo = 2131493009;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int buttonAdduser = 2131492997;
+			// aapt resource value: 0x7f0c0086
+			public const int buttonAdduser = 2131492998;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int buttonCancel = 2131492994;
+			// aapt resource value: 0x7f0c0083
+			public const int buttonCancel = 2131492995;
 			
-			// aapt resource value: 0x7f0c00a4
-			public const int buttonChallenge = 2131493028;
+			// aapt resource value: 0x7f0c00a5
+			public const int buttonChallenge = 2131493029;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int buttonPanel = 2131492949;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int buttonSave = 2131492995;
+			// aapt resource value: 0x7f0c0084
+			public const int buttonSave = 2131492996;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int buttonStart = 2131493029;
+			// aapt resource value: 0x7f0c00a6
+			public const int buttonStart = 2131493030;
 			
-			// aapt resource value: 0x7f0c00a8
-			public const int buttoncancellist = 2131493032;
+			// aapt resource value: 0x7f0c00a9
+			public const int buttoncancellist = 2131493033;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00d6
 			public const int calories = 2131493078;
 			
 			// aapt resource value: 0x7f0c00bb
 			public const int cancel_action = 2131493051;
+=======
+			// aapt resource value: 0x7f0c00d9
+			public const int calories = 2131493081;
+			
+			// aapt resource value: 0x7f0c00bc
+			public const int cancel_action = 2131493052;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0022
 			public const int center = 2131492898;
@@ -2708,14 +2903,24 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0024
 			public const int center_vertical = 2131492900;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00d9
 			public const int checkUser = 2131493081;
+=======
+			// aapt resource value: 0x7f0c00db
+			public const int checkUser = 2131493083;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0065
 			public const int checkbox = 2131492965;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00c3
 			public const int chronometer = 2131493059;
+=======
+			// aapt resource value: 0x7f0c00c4
+			public const int chronometer = 2131493060;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c002d
 			public const int clip_horizontal = 2131492909;
@@ -2726,8 +2931,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0047
 			public const int collapseActionView = 2131492935;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int connectband = 2131493012;
+			// aapt resource value: 0x7f0c0095
+			public const int connectband = 2131493013;
 			
 			// aapt resource value: 0x7f0c0058
 			public const int contentPanel = 2131492952;
@@ -2747,32 +2952,37 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0051
 			public const int default_activity_button = 2131492945;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int design_bottom_sheet = 2131493016;
+			// aapt resource value: 0x7f0c0099
+			public const int design_bottom_sheet = 2131493017;
+			
+			// aapt resource value: 0x7f0c00a0
+			public const int design_menu_item_action_area = 2131493024;
 			
 			// aapt resource value: 0x7f0c009f
-			public const int design_menu_item_action_area = 2131493023;
+			public const int design_menu_item_action_area_stub = 2131493023;
 			
 			// aapt resource value: 0x7f0c009e
-			public const int design_menu_item_action_area_stub = 2131493022;
+			public const int design_menu_item_text = 2131493022;
 			
 			// aapt resource value: 0x7f0c009d
-			public const int design_menu_item_text = 2131493021;
-			
-			// aapt resource value: 0x7f0c009c
-			public const int design_navigation_view = 2131493020;
+			public const int design_navigation_view = 2131493021;
 			
 			// aapt resource value: 0x7f0c003c
 			public const int disableHome = 2131492924;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int drawerlayout = 2131493000;
+			// aapt resource value: 0x7f0c0089
+			public const int drawerlayout = 2131493001;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00d7
 			public const int duration = 2131493079;
+=======
+			// aapt resource value: 0x7f0c00d8
+			public const int duration = 2131493080;
+>>>>>>> origin/minh_ui
 			
-			// aapt resource value: 0x7f0c007e
-			public const int editTextVal = 2131492990;
+			// aapt resource value: 0x7f0c007f
+			public const int editTextVal = 2131492991;
 			
 			// aapt resource value: 0x7f0c0070
 			public const int edit_query = 2131492976;
@@ -2780,8 +2990,13 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0025
 			public const int end = 2131492901;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00cd
 			public const int end_padder = 2131493069;
+=======
+			// aapt resource value: 0x7f0c00ce
+			public const int end_padder = 2131493070;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c001c
 			public const int enterAlways = 2131492892;
@@ -2810,18 +3025,27 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0033
 			public const int @fixed = 2131492915;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00b5
 			public const int flm_name = 2131493045;
 			
 			// aapt resource value: 0x7f0c00b6
 			public const int flm_status = 2131493046;
+=======
+			// aapt resource value: 0x7f0c00b6
+			public const int flm_name = 2131493046;
+			
+			// aapt resource value: 0x7f0c00b7
+			public const int flm_status = 2131493047;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c00ae
 			public const int floatingActionButton = 2131493038;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int frameLayout = 2131493002;
+			// aapt resource value: 0x7f0c008b
+			public const int frameLayout = 2131493003;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00e6
 			public const int friend_item = 2131493094;
 			
@@ -2833,6 +3057,25 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00dd
 			public const int header_cover_image = 2131493085;
+=======
+			// aapt resource value: 0x7f0c00e8
+			public const int friend_item = 2131493096;
+			
+			// aapt resource value: 0x7f0c00ac
+			public const int friendbanner = 2131493036;
+			
+			// aapt resource value: 0x7f0c00b1
+			public const int friendmap = 2131493041;
+			
+			// aapt resource value: 0x7f0c007d
+			public const int goalbanner = 2131492989;
+			
+			// aapt resource value: 0x7f0c00ea
+			public const int group1 = 2131493098;
+			
+			// aapt resource value: 0x7f0c00df
+			public const int header_cover_image = 2131493087;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0007
 			public const int home = 2131492871;
@@ -2840,8 +3083,16 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c003d
 			public const int homeAsUp = 2131492925;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00e5
 			public const int home_item = 2131493093;
+=======
+			// aapt resource value: 0x7f0c00e7
+			public const int home_item = 2131493095;
+			
+			// aapt resource value: 0x7f0c00af
+			public const int homebanner = 2131493039;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c000f
 			public const int hybrid = 2131492879;
@@ -2849,8 +3100,13 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0053
 			public const int icon = 2131492947;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00c8
 			public const int icon_group = 2131493064;
+=======
+			// aapt resource value: 0x7f0c00c9
+			public const int icon_group = 2131493065;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0016
 			public const int icon_only = 2131492886;
@@ -2861,6 +3117,7 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0050
 			public const int image = 2131492944;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00b1
 			public const int imageViewAvatar = 2131493041;
 			
@@ -2872,12 +3129,25 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00c4
 			public const int info = 2131493060;
+=======
+			// aapt resource value: 0x7f0c00b2
+			public const int imageViewAvatar = 2131493042;
+			
+			// aapt resource value: 0x7f0c00b5
+			public const int imageViewMedal = 2131493045;
+			
+			// aapt resource value: 0x7f0c00b3
+			public const int imageViewSport = 2131493043;
+			
+			// aapt resource value: 0x7f0c00c5
+			public const int info = 2131493061;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c000e
 			public const int item_touch_helper_previous_elevation = 2131492878;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int largeLabel = 2131493014;
+			// aapt resource value: 0x7f0c0097
+			public const int largeLabel = 2131493015;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int left = 2131492903;
@@ -2885,33 +3155,47 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c001b
 			public const int light = 2131492891;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00c9
 			public const int line1 = 2131493065;
 			
 			// aapt resource value: 0x7f0c00cb
 			public const int line3 = 2131493067;
+=======
+			// aapt resource value: 0x7f0c00ca
+			public const int line1 = 2131493066;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int linearLayout = 2131493034;
+			// aapt resource value: 0x7f0c00cc
+			public const int line3 = 2131493068;
+>>>>>>> origin/minh_ui
 			
-			// aapt resource value: 0x7f0c0093
-			public const int listBand = 2131493011;
+			// aapt resource value: 0x7f0c00ab
+			public const int linearLayout = 2131493035;
+			
+			// aapt resource value: 0x7f0c0094
+			public const int listBand = 2131493012;
 			
 			// aapt resource value: 0x7f0c003a
 			public const int listMode = 2131492922;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int listViewToDo = 2131493009;
+			// aapt resource value: 0x7f0c0092
+			public const int listViewToDo = 2131493010;
 			
 			// aapt resource value: 0x7f0c0052
 			public const int list_item = 2131492946;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00af
 			public const int listview_friendlistmap = 2131493039;
+=======
+			// aapt resource value: 0x7f0c00b0
+			public const int listview_friendlistmap = 2131493040;
+>>>>>>> origin/minh_ui
 			
-			// aapt resource value: 0x7f0c00a9
-			public const int main_content = 2131493033;
+			// aapt resource value: 0x7f0c00aa
+			public const int main_content = 2131493034;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00e3
 			public const int masked = 2131493091;
 			
@@ -2926,6 +3210,25 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00ec
 			public const int menu_tab = 2131493100;
+=======
+			// aapt resource value: 0x7f0c00e5
+			public const int masked = 2131493093;
+			
+			// aapt resource value: 0x7f0c00be
+			public const int media_actions = 2131493054;
+			
+			// aapt resource value: 0x7f0c00e6
+			public const int menu_refresh = 2131493094;
+			
+			// aapt resource value: 0x7f0c00ed
+			public const int menu_snack = 2131493101;
+			
+			// aapt resource value: 0x7f0c00ee
+			public const int menu_tab = 2131493102;
+			
+			// aapt resource value: 0x7f0c00eb
+			public const int menus = 2131493099;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0045
 			public const int middle = 2131492933;
@@ -2933,17 +3236,20 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0032
 			public const int mini = 2131492914;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int msgText = 2131492998;
+			// aapt resource value: 0x7f0c0087
+			public const int msgText = 2131492999;
 			
 			// aapt resource value: 0x7f0c0035
 			public const int multiply = 2131492917;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int nav_view = 2131493004;
+			// aapt resource value: 0x7f0c00ad
+			public const int myImageViewText = 2131493037;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int navigation_header_container = 2131493019;
+			// aapt resource value: 0x7f0c008d
+			public const int nav_view = 2131493005;
+			
+			// aapt resource value: 0x7f0c009c
+			public const int navigation_header_container = 2131493020;
 			
 			// aapt resource value: 0x7f0c0049
 			public const int never = 2131492937;
@@ -2954,6 +3260,7 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0011
 			public const int normal = 2131492881;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00c6
 			public const int notification_background = 2131493062;
 			
@@ -2962,6 +3269,16 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00bf
 			public const int notification_main_column_container = 2131493055;
+=======
+			// aapt resource value: 0x7f0c00c7
+			public const int notification_background = 2131493063;
+			
+			// aapt resource value: 0x7f0c00c1
+			public const int notification_main_column = 2131493057;
+			
+			// aapt resource value: 0x7f0c00c0
+			public const int notification_main_column_container = 2131493056;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c002b
 			public const int parallax = 2131492907;
@@ -2972,6 +3289,7 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c002c
 			public const int pin = 2131492908;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00d0
 			public const int place_autocomplete_clear_button = 2131493072;
 			
@@ -3004,9 +3322,43 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00ea
 			public const int progress = 2131493098;
+=======
+			// aapt resource value: 0x7f0c00d1
+			public const int place_autocomplete_clear_button = 2131493073;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int progressBarSync = 2131493026;
+			// aapt resource value: 0x7f0c00d3
+			public const int place_autocomplete_powered_by_google = 2131493075;
+			
+			// aapt resource value: 0x7f0c00d5
+			public const int place_autocomplete_prediction_primary_text = 2131493077;
+			
+			// aapt resource value: 0x7f0c00d6
+			public const int place_autocomplete_prediction_secondary_text = 2131493078;
+			
+			// aapt resource value: 0x7f0c00d4
+			public const int place_autocomplete_progress = 2131493076;
+			
+			// aapt resource value: 0x7f0c00cf
+			public const int place_autocomplete_search_button = 2131493071;
+			
+			// aapt resource value: 0x7f0c00d0
+			public const int place_autocomplete_search_input = 2131493072;
+			
+			// aapt resource value: 0x7f0c00d2
+			public const int place_autocomplete_separator = 2131493074;
+			
+			// aapt resource value: 0x7f0c00e9
+			public const int profile_item = 2131493097;
+			
+			// aapt resource value: 0x7f0c00e1
+			public const int profile_layout = 2131493089;
+			
+			// aapt resource value: 0x7f0c00ec
+			public const int progress = 2131493100;
+>>>>>>> origin/minh_ui
+			
+			// aapt resource value: 0x7f0c00a3
+			public const int progressBarSync = 2131493027;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int progress_circular = 2131492872;
@@ -3017,20 +3369,28 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0067
 			public const int radio = 2131492967;
 			
-			// aapt resource value: 0x7f0c00a7
-			public const int recyclerView = 2131493031;
+			// aapt resource value: 0x7f0c00a8
+			public const int recyclerView = 2131493032;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int relativelayout = 2131493001;
+			// aapt resource value: 0x7f0c008a
+			public const int relativelayout = 2131493002;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int right = 2131492904;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00c5
 			public const int right_icon = 2131493061;
 			
 			// aapt resource value: 0x7f0c00c1
 			public const int right_side = 2131493057;
+=======
+			// aapt resource value: 0x7f0c00c6
+			public const int right_icon = 2131493062;
+			
+			// aapt resource value: 0x7f0c00c2
+			public const int right_side = 2131493058;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0012
 			public const int satellite = 2131492882;
@@ -3086,8 +3446,13 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c007c
 			public const int select_dialog_listview = 2131492988;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00dc
 			public const int shopmap = 2131493084;
+=======
+			// aapt resource value: 0x7f0c00de
+			public const int shopmap = 2131493086;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0066
 			public const int shortcut = 2131492966;
@@ -3101,14 +3466,14 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0040
 			public const int showTitle = 2131492928;
 			
-			// aapt resource value: 0x7f0c0095
-			public const int smallLabel = 2131493013;
+			// aapt resource value: 0x7f0c0096
+			public const int smallLabel = 2131493014;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int snackbar_action = 2131493019;
 			
 			// aapt resource value: 0x7f0c009a
-			public const int snackbar_action = 2131493018;
-			
-			// aapt resource value: 0x7f0c0099
-			public const int snackbar_text = 2131493017;
+			public const int snackbar_text = 2131493018;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int snap = 2131492896;
@@ -3116,14 +3481,14 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0056
 			public const int spacer = 2131492950;
 			
+			// aapt resource value: 0x7f0c0081
+			public const int spinnerGoalTime = 2131492993;
+			
 			// aapt resource value: 0x7f0c0080
-			public const int spinnerGoalTime = 2131492992;
+			public const int spinnerGoalType = 2131492992;
 			
-			// aapt resource value: 0x7f0c007f
-			public const int spinnerGoalType = 2131492991;
-			
-			// aapt resource value: 0x7f0c007d
-			public const int spinnerSport = 2131492989;
+			// aapt resource value: 0x7f0c007e
+			public const int spinnerSport = 2131492990;
 			
 			// aapt resource value: 0x7f0c000a
 			public const int split_action_bar = 2131492874;
@@ -3143,11 +3508,19 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0029
 			public const int start = 2131492905;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00bc
 			public const int status_bar_latest_event_content = 2131493052;
 			
 			// aapt resource value: 0x7f0c00d8
 			public const int stop = 2131493080;
+=======
+			// aapt resource value: 0x7f0c00bd
+			public const int status_bar_latest_event_content = 2131493053;
+			
+			// aapt resource value: 0x7f0c00da
+			public const int stop = 2131493082;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0068
 			public const int submenuarrow = 2131492968;
@@ -3161,14 +3534,22 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0013
 			public const int terrain = 2131492883;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00cc
 			public const int text = 2131493068;
 			
 			// aapt resource value: 0x7f0c00ca
 			public const int text2 = 2131493066;
+=======
+			// aapt resource value: 0x7f0c00cd
+			public const int text = 2131493069;
 			
-			// aapt resource value: 0x7f0c008f
-			public const int textNewToDo = 2131493007;
+			// aapt resource value: 0x7f0c00cb
+			public const int text2 = 2131493067;
+>>>>>>> origin/minh_ui
+			
+			// aapt resource value: 0x7f0c0090
+			public const int textNewToDo = 2131493008;
 			
 			// aapt resource value: 0x7f0c005c
 			public const int textSpacerNoButtons = 2131492956;
@@ -3176,6 +3557,7 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c005b
 			public const int textSpacerNoTitle = 2131492955;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00b3
 			public const int textView = 2131493043;
 			
@@ -3184,24 +3566,33 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00ac
 			public const int textViewCalories = 2131493036;
+=======
+			// aapt resource value: 0x7f0c00b4
+			public const int textView = 2131493044;
+>>>>>>> origin/minh_ui
 			
-			// aapt resource value: 0x7f0c0081
-			public const int textViewDate = 2131492993;
+			// aapt resource value: 0x7f0c0082
+			public const int textViewDate = 2131492994;
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int textViewGoalMessage = 2131493025;
+			// aapt resource value: 0x7f0c00a2
+			public const int textViewGoalMessage = 2131493026;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int textViewName = 2131493030;
+			// aapt resource value: 0x7f0c00a7
+			public const int textViewName = 2131493031;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00ab
 			public const int textViewSteps = 2131493035;
 			
 			// aapt resource value: 0x7f0c008e
 			public const int textViewTitle = 2131493006;
+=======
+			// aapt resource value: 0x7f0c008f
+			public const int textViewTitle = 2131493007;
+>>>>>>> origin/minh_ui
 			
-			// aapt resource value: 0x7f0c00a0
-			public const int text_input_password_toggle = 2131493024;
+			// aapt resource value: 0x7f0c00a1
+			public const int text_input_password_toggle = 2131493025;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int textinput_counter = 2131492864;
@@ -3209,8 +3600,13 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0001
 			public const int textinput_error = 2131492865;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00c2
 			public const int time = 2131493058;
+=======
+			// aapt resource value: 0x7f0c00c3
+			public const int time = 2131493059;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0054
 			public const int title = 2131492948;
@@ -3227,8 +3623,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0060
 			public const int topPanel = 2131492960;
 			
-			// aapt resource value: 0x7f0c0097
-			public const int touch_outside = 2131493015;
+			// aapt resource value: 0x7f0c0098
+			public const int touch_outside = 2131493016;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int transition_current_scene = 2131492876;
@@ -3236,8 +3632,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c000d
 			public const int transition_scene_layoutid_cache = 2131492877;
 			
-			// aapt resource value: 0x7f0c00a3
-			public const int txtProgress = 2131493027;
+			// aapt resource value: 0x7f0c00a4
+			public const int txtProgress = 2131493028;
 			
 			// aapt resource value: 0x7f0c000b
 			public const int up = 2131492875;
@@ -3245,6 +3641,7 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0041
 			public const int useLogo = 2131492929;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00e0
 			public const int user_profile_name = 2131493088;
 			
@@ -3253,15 +3650,30 @@ namespace connectivesport
 			
 			// aapt resource value: 0x7f0c00e1
 			public const int user_profile_short_bio = 2131493089;
+=======
+			// aapt resource value: 0x7f0c00e2
+			public const int user_profile_name = 2131493090;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int userid = 2131492996;
+			// aapt resource value: 0x7f0c00e0
+			public const int user_profile_photo = 2131493088;
+			
+			// aapt resource value: 0x7f0c00e3
+			public const int user_profile_short_bio = 2131493091;
+>>>>>>> origin/minh_ui
+			
+			// aapt resource value: 0x7f0c0085
+			public const int userid = 2131492997;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int view_offset_helper = 2131492866;
 			
+<<<<<<< HEAD
 			// aapt resource value: 0x7f0c00e2
 			public const int visible = 2131493090;
+=======
+			// aapt resource value: 0x7f0c00e4
+			public const int visible = 2131493092;
+>>>>>>> origin/minh_ui
 			
 			// aapt resource value: 0x7f0c0018
 			public const int wide = 2131492888;

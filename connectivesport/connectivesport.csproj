@@ -267,6 +267,16 @@
     <AndroidResource Include="Resources\drawable\border_button.xml" />
     <AndroidResource Include="Resources\layout\dialog_fragment_band_list.axml" />
     <AndroidResource Include="Resources\layout\item_band.axml" />
+    <AndroidResource Include="Resources\drawable\homebanner.png" />
+    <AndroidResource Include="Resources\drawable\friendbanner.png" />
+    <AndroidResource Include="Resources\drawable\coverimage.png" />
+    <AndroidResource Include="Resources\drawable\band.png" />
+    <AndroidResource Include="Resources\drawable\timeroff.png" />
+    <AndroidResource Include="Resources\drawable\timer.png" />
+    <AndroidResource Include="Resources\drawable\storemarker.png" />
+    <AndroidResource Include="Resources\drawable\storemarker50.png" />
+    <AndroidResource Include="Resources\drawable\gym.png" />
+    <AndroidResource Include="Resources\drawable\addgoalbanner.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

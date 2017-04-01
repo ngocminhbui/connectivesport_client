@@ -38,6 +38,7 @@ namespace connectivesport
 		FriendGoalAdapter mAdapter;
 
 		Button buttonChallenge;
+		Button buttonPractice;
 
 		ProgressBar progrssBarObj;
 
@@ -77,6 +78,17 @@ namespace connectivesport
 			buttonChallenge = FindViewById<Button>(Resource.Id.buttonChallenge);
 
 			buttonChallenge.Click += ButtonChallenge_Click;
+
+
+			buttonPractice = FindViewById<Button>(Resource.Id.buttonStart);
+			buttonPractice.Click += (sender, e) =>
+			{
+				Context context = this;
+				Intent intent = new Intent(context, typeof(Practice));
+
+				context.StartActivity(intent);
+			};
+
 		}
 
 

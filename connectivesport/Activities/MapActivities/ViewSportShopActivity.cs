@@ -14,6 +14,8 @@ using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Android.Graphics;
+using Android.Gms.Maps.Model;
 
 namespace connectivesport
 {
@@ -88,7 +90,11 @@ namespace connectivesport
 					List<SportStore> list_stores = JsonConvert.DeserializeObject<IEnumerable<SportStore>>(results.ToString());
 					foreach (var store in list_stores)
 					{
-						map.AddMarker(new Android.Gms.Maps.Model.MarkerOptions().SetPosition(new Android.Gms.Maps.Model.LatLng(store.geometry.location.lat, store.geometry.location.lng)).SetTitle(store.name));
+						map.AddMarker(new Android.Gms.Maps.Model.MarkerOptions()
+						              .SetPosition(new Android.Gms.Maps.Model.LatLng(store.geometry.location.lat, store.geometry.location.lng))
+						              .SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.storemarker50))
+						              .SetTitle(store.name));
+										
 					}
 				}
 				catch (Exception e)
@@ -106,7 +112,11 @@ namespace connectivesport
 					List<Gym> list_stores = JsonConvert.DeserializeObject<IEnumerable<Gym>>(results.ToString());
 					foreach (var store in list_stores)
 					{
-						map.AddMarker(new Android.Gms.Maps.Model.MarkerOptions().SetPosition(new Android.Gms.Maps.Model.LatLng(store.geometry.location.lat, store.geometry.location.lng)).SetTitle(store.name));
+						map.AddMarker(new Android.Gms.Maps.Model.
+													  MarkerOptions().SetPosition(new Android.Gms.Maps.Model.LatLng(store.geometry.location.lat, store.geometry.location.lng))
+																	 .SetTitle(store.name).SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.gym)
+						              	
+						                                                                          ));
 					}
 				}
 				catch (Exception e)

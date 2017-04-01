@@ -19,7 +19,7 @@ using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 namespace connectivesport
 {
 
-	[Activity(Label = "ConnectiveSport", MainLauncher = true, Theme = "@style/BaseTheme")]
+	[Activity(Label = "ConnectiveSport", MainLauncher = false, Theme = "@style/BaseTheme")]
 
 	public class MainActivity : AppCompatActivity
 	{

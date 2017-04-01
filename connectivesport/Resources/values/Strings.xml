@@ -13,6 +13,11 @@
 
 	<string name="sport_prompt">Choose a sport</string>
 	<string name="goal_prompt">Your Goal</string>
+
+
+	<string name="strBottomLine">From android material design</string>
+	 <string name="open_drawer">Open drawer</string>
+	<string name="close_drawer">Close drawer</string>
 	
 	<string-array name="goal_time">
         <item>day</item>

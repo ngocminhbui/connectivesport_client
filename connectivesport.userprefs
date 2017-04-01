@@ -12,6 +12,11 @@
       <File FileName="connectivesport/Assets/samples/08_BrowsingPois_2_AddingRadar/js/marker.js" Line="47" Column="8" />
       <File FileName="connectivesport/Assets/samples/08_BrowsingPois_2_AddingRadar/js/addingradar.js" Line="53" Column="22" />
       <File FileName="connectivesport/Activities/AddGoalActivity.cs" Line="7" Column="25" />
+      <File FileName="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" Line="28" Column="3" />
+      <File FileName="connectivesport/Resources/menu/navmenu.xml" Line="12" Column="34" />
+      <File FileName="connectivesport/Models/UserManager.cs" Line="51" Column="7" />
+      <File FileName="connectivesport/ToDoActivity.cs" Line="60" Column="64" />
+      <File FileName="connectivesport/Resources/menu/drawer_menu.xml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,7 +41,9 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ngocminh/Projects/connectivesport_client/connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" relfile="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" line="119" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.connectivesport PreferredExecutionTarget="Android.97f7f290" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

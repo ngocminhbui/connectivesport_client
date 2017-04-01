@@ -10,74 +10,66 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Wikitude.Architect;
-using Wikitude.Common.Util;
 using Android.Content.PM;
 using Wikitude.Common.Camera;
 using Wikitude.Tools.Device.Features;
 using Android.Util;
+using System.Timers;
 
 namespace connectivesport
 {
-    [Activity(Label = "TestAR_Activity", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
-    public class TestAR_Activity : Activity, ArchitectView.IArchitectUrlListener
+    [Activity(Label = "WikitudeActivity", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
+    public class TestAR : Activity, ArchitectView.IArchitectUrlListener
     {
         protected ArchitectView architectView;
 
-        private const string SAMPLE_WORLD_URL = "samples/POI2/index.html";
+        private const string SAMPLE_WORLD_URL = "samples/08_BrowsingPois_2_AddingRadar/index.html";
 
-        public const string WIKITUDE_SDK_KEY = "qmh1Uynkxp1bhnqymMkItsVjqpl8PK5U/xBsAjFCaJxBExCEfiNcTxgLQrK4NWZq5nA1rP6n2AC1taCsDYfsEssjmMbdGG8xlOXqlZejP7p2+boG5/L3w8AsmOXst+DtJ3s+EgANJQFSyj1CuOuQ0ztoMEKiARQX+2/NwhEU/tVTYWx0ZWRfX+yokGspFYRWejA0HNDE/gS0GfTSI49EuNOIS/0mYtBHlulGZec3fzfTHJR8A+SpNlIAE1TF4hzM6fyosLcZs5zNHxTugyF8YTfb+MRJEXLMWoPnBEfrK01FpQTAus/bkCa4/3u8wkPSXWGOH5C9ejXveU1YQ22IGB/Ivdxd6hvZErqShjW5ZfWMy0P6BAqRLrggaktNgI36NjYRmcHCd+MsM53b9aBWwI6oZ5cU1LDWwAOMngSpAojKqael/6mchcTP0vwMRpJi0YfjIpHF4iAs7oWRh2qbujfgDjranVoqxNAvr2zi1aQwkOPVOPUYATp2HSOBFQ8CDZrCUuHE7zJjm6sA8B3VtB65336jV3jvix+uqMnWuI8D04qVmfA0oq/J7nfXytJadjX7zeC+ewJnni2b635rfndzy09lgSD5lmn44hJ2K2WxGMQPPl1ArPQ3Ngt52cUNXLdEw6Wfa6xNXZyoDwkoymrK6xQHhNmvDvB24cFP+Wc=";
-        public const string WIKITUDE_SDK_KEY2 = "NGBXvYi66YY4pT3CqeLvcv31N9xl4uasQSZwF5xPfJ5lcrI5leTkRrzzVihYTbEbRWRf9S9hWqkeCykxd1IgU/qbg5WJjwSK7dk9f/zHwlV1Qa/JYIB6l+sh2OjrdrXO7E9Qdqih1RYGF+3MDt7CC3BmMUrhkFanOvCf/eXMmX1TYWx0ZWRfX6PikQ4qQBjn7mRR7l4e36y3jrIqcuQfE4vdeKCDiD2pePwQ41U/FnA7HSShjqq9TcTpQaASuWQL+nnrKUU3ybpck+50zKokc0nK6tX0rjqAE3cKZJIXMV1VRszX2rUJFFzM80eMWNQ2FN6I3e0LlyY3gkAt05XUiTq4YaOVb62gRlytIPNvaxwFoj3Xvh5+vR4afdbKAgdAlxT4KLazRObTUBuYHWeKU9/cXR4RagzSDUt+mpYzEVpZTB8OjGFWKf+j+5kCRrQ/ra4gYIuf3KqYFy0JsuAeN2keaI5M34saqcTNSUV7Ng1V/ZjJg9Ac56TLC+D1FuMDdpZ6c3eWTsaccwc4tMmnyiA8Y60GqXIeFOClE1locWR0Fu/MXmOkoFSXGy/ldfzVOo756Mhb4xCSTvbN+PUKbyM9EYWrmj3Yu88wxglud9L+G8etmi+Mr1wO4SGCfIQdzu1Pt9go8QhZpIB7Nyk1IirWW99b10Kzh8rW1fj8ReVBddHb4SU5+r2/CmAUMrbohodJFBefpbagBhQ7EV8sg/1ylBYaNVXUi3bfCt437rcwNniWV6/Pm4thryejMMflAji9gp+TgioY4r1ex6LDzzzRrHGZ+Qypwrm41oxWpz5Gw4hbkeakbqhVT7AgTq2bvQ++Gkksaw5RO54rIzuh2QOu1Ad+XY81VHLYMnudcLzWuY3WcrQEqgQ/jRIGOH4ZywKTOqtXozF4Us85z5CWHfdESc2foe68ZbOem/pn7a9Hk+foWy9oFp8/0lEKjoVCZp264eeU7EsdQoHNnPDq8w3UZSfVGd3sOytAIQAkeFER/5GNQBXM+gsoCU3cd5Wrfvj9LHrC223CqdDENpyVc2uHc+RfyOAhXMZxtw0+Hi2etkJXkC+6y4ncxwKt8wlThhBtpDfgE0wB6wZ0sHLE+fmK7LOSUipj8qc7s6sD01la+xHL7yrcpWDJIJ46cgiycaVb7AWSW5c8wXpKK+i/JgI8IDVDPqMFZVfhFhfW8jg=";
+        private const string TITLE = "Image on Target";
 
-        public bool UrlWasInvoked(string p0)
+        Timer clock = new Timer();
+        //private const string WIKITUDE_SDK_KEY = "qmh1Uynkxp1bhnqymMkItsVjqpl8PK5U/xBsAjFCaJxBExCEfiNcTxgLQrK4NWZq5nA1rP6n2AC1taCsDYfsEssjmMbdGG8xlOXqlZejP7p2+boG5/L3w8AsmOXst+DtJ3s+EgANJQFSyj1CuOuQ0ztoMEKiARQX+2/NwhEU/tVTYWx0ZWRfX+yokGspFYRWejA0HNDE/gS0GfTSI49EuNOIS/0mYtBHlulGZec3fzfTHJR8A+SpNlIAE1TF4hzM6fyosLcZs5zNHxTugyF8YTfb+MRJEXLMWoPnBEfrK01FpQTAus/bkCa4/3u8wkPSXWGOH5C9ejXveU1YQ22IGB/Ivdxd6hvZErqShjW5ZfWMy0P6BAqRLrggaktNgI36NjYRmcHCd+MsM53b9aBWwI6oZ5cU1LDWwAOMngSpAojKqael/6mchcTP0vwMRpJi0YfjIpHF4iAs7oWRh2qbujfgDjranVoqxNAvr2zi1aQwkOPVOPUYATp2HSOBFQ8CDZrCUuHE7zJjm6sA8B3VtB65336jV3jvix+uqMnWuI8D04qVmfA0oq/J7nfXytJadjX7zeC+ewJnni2b635rfndzy09lgSD5lmn44hJ2K2WxGMQPPl1ArPQ3Ngt52cUNXLdEw6Wfa6xNXZyoDwkoymrK6xQHhNmvDvB24cFP+Wc=";
+        private const string WIKITUDE_SDK_KEY = "2BxchMxrW/jtB44uOQHN6nk0cGBtML7oFcwod+qkffm7+vfEixhDSbGYMX/5Juo6LigfVWeFxR7cfMlBU2BrphkNe37m4JMA6ojU4k/Kmd6+WQJIBx9ZvJGeDs6NQsVCvSqC3OGqQSiigNjoh8/fspuDVjstrbPtWOz0D8QhtTRTYWx0ZWRfXxzyFOgdfZIM800QV8bOSHn7F2merq8oIf3m7/r5b/2fg2VRee0gEJSxFisUJzdvBaBsLg3VEWZjCuMiCchmeU4rjLkUV1BIsgVyDbyZb9J7dY4vl/A14MNNzdPI9vP6YmI/NAdx/x2TrHt1fl1HsHNUnneBrNwsXE4dfOhZgzGoN6FA9lHEfGOtgRK6Zrq+lBz6efYqoGoUB/Q7fNKJmLHKmJ7OYQWvblL6otEE7m7ugojOka1VWNGH9VUqxZyXpXB8KWbQ2IElFTdUHGQCLYnxWiurH78A4/yKVW46oQIaWCwjYmec5w7IHnlxiadW0JucXb9M6c1UC1j3ebhJoAEDLTj77rN6z9q6Gp6dTjDWYNuIGd7tWIBUYU/JbiwNSRMP7cfW8mz/EirpjF92fKq0mHwwWNhf2CuIf8ZQXtDfDZLOxdJZmkIIXdjepwDfRxVnibBbAEF894OQroCnIWJCI8k0wamJLyKRR7s/ihITdsEbi52zl0e8FL8HXyQ7/JBk26h5Xtva7AXxK9b3QVEMpF5m1V6eWQ==";
+        protected override void OnCreate(Bundle bundle)
         {
-            return true;
-        }
-
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.AR_layout);
+
+            //Title = TITLE;
 
             architectView = FindViewById<ArchitectView>(Resource.Id.architectView);
             ArchitectStartupConfiguration startupConfiguration = new ArchitectStartupConfiguration();
             startupConfiguration.setLicenseKey(WIKITUDE_SDK_KEY);
-            startupConfiguration.setFeatures(ArchitectStartupConfiguration.Features.ImageTracking);
+            //startupConfiguration.setFeatures(ArchitectStartupConfiguration.Features.Tracking2D);
             startupConfiguration.setCameraResolution(CameraSettings.CameraResolution.Auto);
 
-            int requiredFeatures = ArchitectStartupConfiguration.Features.Geo | ArchitectStartupConfiguration.Features.ImageTracking;
-
+            /* use  
+			   int requiredFeatures = StartupConfiguration.Features.Tracking2D | StartupConfiguration.Features.Geo;
+			   if you need both 2d Tracking and Geo
+			*/
+            int requiredFeatures = ArchitectStartupConfiguration.Features.Geo;
             MissingDeviceFeatures missingDeviceFeatures = ArchitectView.isDeviceSupported(this, requiredFeatures);
- 
+
+            clock.Interval = 1000;
             if ((ArchitectView.getSupportedFeaturesForDevice(Android.App.Application.Context) & requiredFeatures) == requiredFeatures)
             {
                 architectView.OnCreate(startupConfiguration);
                 architectView.RegisterUrlListener(this);
+
             }
             else
             {
                 architectView = null;
                 Toast.MakeText(this, missingDeviceFeatures.getMissingFeatureMessage(), ToastLength.Long).Show();
             }
+
+            clock.Elapsed += Clock_Elapsed;
         }
 
-        protected override void OnPostCreate(Bundle savedInstanceState)
+        private void Clock_Elapsed(object sender, ElapsedEventArgs e)
         {
-            base.OnPostCreate(savedInstanceState);
-
-            if (architectView != null)
-            {
-                architectView.OnPostCreate();
-
-                try
-                {
-                    architectView.Load(SAMPLE_WORLD_URL);
-                }
-                catch (Exception ex)
-                {
-                    Log.Error("WIKITUDE_SAMPLE", ex.ToString());
-                }
-            }
+            architectView.SetLocation(10.7527633, 106.6630345, 1.0);
         }
 
         protected override void OnResume()
@@ -109,6 +101,43 @@ namespace connectivesport
             {
                 architectView.OnDestroy();
             }
+        }
+
+        public override void OnLowMemory()
+        {
+            base.OnLowMemory();
+
+            if (architectView != null)
+                architectView.OnLowMemory();
+        }
+
+        protected override void OnPostCreate(Bundle savedInstanceState)
+        {
+            base.OnPostCreate(savedInstanceState);
+
+            if (architectView != null)
+            {
+                architectView.OnPostCreate();
+
+                try
+                {
+                    architectView.Load(SAMPLE_WORLD_URL);
+                    architectView.SetLocation(10.7527633, 106.6630345, 1.0);
+                    clock.Start();
+                }
+                catch (Exception ex)
+                {
+                    Log.Error("WIKITUDE_SAMPLE", ex.ToString());
+                }
+            }
+        }
+
+        public bool UrlWasInvoked(string url)
+        {
+            /* This is a example implementation of the UrlWasInvoked method */
+            /* The url is defined in JS where document.location = 'architectsdk://...'; is used. */
+            //Console.WriteLine("architect view invoked url: " + url);
+            return true;
         }
     }
 }

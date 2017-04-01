@@ -6,16 +6,15 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <LinearLayout
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:padding="8dp"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="70dp"
+            android:layout_width="50dp"
             android:layout_gravity="center"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/imageViewSport" />
         <TextView
             android:text="Text"

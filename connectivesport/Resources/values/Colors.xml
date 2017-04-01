@@ -2,6 +2,8 @@
 <resources>
     <color name="app_primary">#D84315</color>
     <color name="app_primary_dark">#1565C0</color>
+	<color name="progressbar">#3F51B5</color>
+	<color name="progressbackground">#E8EAF6</color>
     <color name="grey">#DDDDDD</color>
     <color name="light_grey">#EEEEEE</color>
     <color name="white_transparent">#99FFFFFF</color>

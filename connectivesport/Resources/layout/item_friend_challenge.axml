@@ -6,6 +6,7 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <LinearLayout
+        android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal">
@@ -40,10 +41,10 @@
                 android:id="@+id/txtProgress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello"
+                android:text="0"
                 android:layout_alignBottom="@+id/progressBarSync"
                 android:layout_centerInParent="true"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
         </RelativeLayout>
     </LinearLayout>
     <View

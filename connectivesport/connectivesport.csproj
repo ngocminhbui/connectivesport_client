@@ -239,6 +239,8 @@
     <Compile Include="Models\UserManager.cs" />
 
     <Compile Include="Helper\LocalDataManager.cs" />
+    <Compile Include="Fragments\BandConnectFragment.cs" />
+    <Compile Include="Adapters\BandAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -259,6 +261,12 @@
     <AndroidResource Include="Resources\drawable\ic_people_black_48dp.png" />
     <AndroidResource Include="Resources\drawable\ic_person_black_48dp.png" />
     <AndroidResource Include="Resources\drawable\ic_add_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\steps.png" />
+    <AndroidResource Include="Resources\drawable\calories.png" />
+    <AndroidResource Include="Resources\drawable\heart.png" />
+    <AndroidResource Include="Resources\drawable\border_button.xml" />
+    <AndroidResource Include="Resources\layout\dialog_fragment_band_list.axml" />
+    <AndroidResource Include="Resources\layout\item_band.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

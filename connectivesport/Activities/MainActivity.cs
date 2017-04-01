@@ -23,6 +23,7 @@ namespace connectivesport
 
 	public class MainActivity : AppCompatActivity
 	{
+		
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -32,7 +33,11 @@ namespace connectivesport
 			SetContentView(Resource.Layout.activity_main);
 
 			BottomNavigationView bottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.bottomNavigationView);
-
+			NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+			if (navigationView != null)
+			{
+				SetUpDrawerContent(navigationView);
+			}
 
 			bottomNavigationView.NavigationItemSelected += (sender, e) =>
 			{
@@ -62,5 +67,24 @@ namespace connectivesport
 			transaction1.Replace(Resource.Id.frameLayout, HomeFragment.NewInstance());
 			transaction1.Commit();
 		}
+
+		private void SetUpDrawerContent(NavigationView navigationView)
+		{
+			navigationView.NavigationItemSelected += (object sender, NavigationView.NavigationItemSelectedEventArgs e) =>
+			{
+				var menuItem = e.MenuItem;
+				menuItem.SetChecked(true);
+				switch (menuItem.ItemId)
+				{
+					case Resource.Id.band_connect:
+						Android.App.FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
+						BandConnectFragment friendDialog = BandConnectFragment.NewInstance();
+						//bundle.PutString("goalID", _goal.Id);
+						friendDialog.Show(fragmentTransaction, "Friend List");
+						break;
+				}
+			};
+		}
 	}
+
 }

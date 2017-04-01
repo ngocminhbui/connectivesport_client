@@ -50,13 +50,16 @@ namespace connectivesport
 			spinner.Adapter = a;
 			spinner.ItemSelected += spinner_ItemSelected;
 
-			var adapter = ArrayAdapter.CreateFromResource(
-				this, Resource.Array.planets_array, Android.Resource.Layout.SimpleSpinnerItem);
-			adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			var adapterGoalType = ArrayAdapter.CreateFromResource(
+				this, Resource.Array.goal_type, Android.Resource.Layout.SimpleSpinnerItem);
+			adapterGoalType.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
-			spinnerGoalType.Adapter = adapter;
+			var adapterGoalTime = ArrayAdapter.CreateFromResource(
+				this, Resource.Array.goal_time, Android.Resource.Layout.SimpleSpinnerItem);
+			adapterGoalTime.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			spinnerGoalType.Adapter = adapterGoalType;
 
-			spinnerGoalTime.Adapter = adapter;
+			spinnerGoalTime.Adapter = adapterGoalTime;
 
 
 

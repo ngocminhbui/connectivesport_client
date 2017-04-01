@@ -9,9 +9,9 @@
             android:icon="@drawable/ic_nav_item"
             android:title="Home" />
         <item
-            android:id="@+id/menus"
+            android:id="@+id/band_connect"
             android:icon="@drawable/ic_nav_item"
-            android:title="Menus" />
+            android:title="Connect to Band" />
         <item
             android:id="@+id/progress"
             android:icon="@drawable/ic_nav_item"

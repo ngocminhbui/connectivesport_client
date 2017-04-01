@@ -23,18 +23,23 @@ namespace connectivesport
         public static BandConnector instance = new BandConnector();
         public IBandInfo MyBand;
         public IBandClient BandClient;
+		public bool useBand = false;
 
         public async Task<bool> BandConnect(IBandInfo myBand)
         {
             MyBand = myBand;
             BandClient = BandClientManager.Instance.Create(Application.Context, MyBand);
             var result = await BandClient.ConnectTaskAsync();
-            if (BandClient.IsConnected)
-            {
-                return true;
-            }
-            else
-                return false;
+			if (BandClient.IsConnected)
+			{
+				useBand = true;
+				return true;
+			}
+			else
+			{
+				useBand = false;
+				return false;
+			}
         }
 
         public IBandInfo[] FindBand()
@@ -43,6 +48,10 @@ namespace connectivesport
             return pairedBand;
         }
 
+		public bool isConnected()
+		{
+			return useBand;
+		}
         public async Task<string> GetVersionAsync()
         {
             string result = "";
@@ -52,7 +61,7 @@ namespace connectivesport
             }
             catch (BandException e)
             {
-                
+				Console.WriteLine(e);
             }
             
             return result;

@@ -280,6 +280,7 @@
     <AndroidResource Include="Resources\drawable\medal7.png" />
     <AndroidResource Include="Resources\drawable\medal15.png" />
     <AndroidResource Include="Resources\drawable\medal14.png" />
+    <AndroidResource Include="Resources\layout\band_frame.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

@@ -29,17 +29,17 @@ namespace connectivesport
 
             SetContentView(Resource.Layout.practice);
             
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.SetTitle("Connect to a Microsoft Band");
-            alert.SetPositiveButton("Connect", (senderAlert, args) => {
-                StartActivityForResult(typeof(BandConnect_Activity), 0);
+            //AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            //alert.SetTitle("Connect to a Microsoft Band");
+            //alert.SetPositiveButton("Connect", (senderAlert, args) => {
+            //    StartActivityForResult(typeof(BandConnect_Activity), 0);
                 
-            });
-            alert.SetNegativeButton("Cancel", (senderAlert, args) => {
-            });
+            //});
+            //alert.SetNegativeButton("Cancel", (senderAlert, args) => {
+            //});
             
-            Dialog dialog = alert.Create();
-            dialog.Show();
+            //Dialog dialog = alert.Create();
+            //dialog.Show();
             
             time = new Timer();
             time.Interval = 1000;
@@ -79,26 +79,19 @@ namespace connectivesport
             });
         }
 
-        private void Sensors_ReadingChanged(object sender, IBandSensorEventEventArgs<IBandCaloriesEvent> e)
-        {
-            RunOnUiThread(() =>
-            {
-                TextView calories = (TextView)FindViewById(Resource.Id.calories);
-                calories.Text = e.SensorReading.CaloriesToday.ToString();
-            });
-        }
 
-        protected override void OnResume()
+
+        protected override async void OnResume()
         {
             base.OnResume();
 
             if (useBand)
             {
                 CaloriesSensor sensors = BandConnector.instance.BandClient.SensorManager.CreateCaloriesSensor();
-                sensors.ReadingChanged += Sensors_ReadingChanged;
-                
-                //if (BandConnector.BandClient.SensorManager.Co != UserConsent.Granted)
-                //await BandConnector.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this);
+                //sensors.ReadingChanged += Sensors_ReadingChanged;
+
+				if (BandConnector.instance.BandClient.SensorManager.CurrentHeartRateConsent != UserConsent.Granted)
+					await BandConnector.instance.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this);
                 sensors.StartReadings();
             }
         }

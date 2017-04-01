@@ -112,7 +112,6 @@ com/google/firebase/iid/zzb.class
 android/support/v4/app/FragmentActivity$HostCallbacks.class
 android/support/v7/app/ActionBar$LayoutParams.class
 android/support/v4/view/ViewCompatICS.class
-md5cc34af8da4329e09bfedf090c42d5b99/TestAR_Activity.class
 android/support/v4/content/FileProvider.class
 android/support/v4/media/session/PlaybackStateCompat$Builder.class
 android/support/v4/media/RatingCompat$StarStyle.class
@@ -223,6 +222,7 @@ android/support/v4/content/res/ConfigurationHelper.class
 com/google/android/gms/R$styleable.class
 com/google/android/gms/common/GooglePlayServicesUtil.class
 mono/MonoRuntimeProvider.class
+md5cc34af8da4329e09bfedf090c42d5b99/TestAR.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
 android/support/v4/app/FragmentManagerImpl$2.class
 mono/MonoPackageManager.class

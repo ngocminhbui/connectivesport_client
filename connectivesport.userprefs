@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Adapters/FriendAdapter.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="76" Column="7" />
-      <File FileName="connectivesport/Activities/FriendProfileActivity.cs" Line="58" Column="4" />
+      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="113" Column="50" />
+      <File FileName="connectivesport/Activities/FriendProfileActivity.cs" Line="13" Column="22" />
       <File FileName="connectivesport/Fragments/UserFragment.cs" Line="60" Column="4" />
       <File FileName="connectivesport/Activities/GoalDetailsActivity.cs" Line="59" Column="62" />
       <File FileName="connectivesport/Helper/LocalDataManager.cs" Line="69" Column="179" />
       <File FileName="connectivesport/Fragments/FriendFragment.cs" Line="85" Column="7" />
       <File FileName="connectivesport/Adapters/FriendAdapter.cs" Line="57" Column="47" />
+      <File FileName="connectivesport/Activities/Practice.cs" Line="86" Column="29" />
+      <File FileName="connectivesport/Assets/samples/08_BrowsingPois_2_AddingRadar/js/marker.js" Line="47" Column="8" />
+      <File FileName="connectivesport/Assets/samples/08_BrowsingPois_2_AddingRadar/js/addingradar.js" Line="53" Column="22" />
+      <File FileName="connectivesport/Activities/AddGoalActivity.cs" Line="7" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,22 +21,13 @@
               <Node name="References" expanded="True" />
               <Node name="Activities" expanded="True">
                 <Node name="MapActivities" expanded="True" />
+                <Node name="Practice.cs" selected="True" />
               </Node>
-              <Node name="Adapters" expanded="True">
-                <Node name="FriendAdapter.cs" selected="True" />
-              </Node>
+              <Node name="Adapters" expanded="True" />
               <Node name="Fragments" expanded="True" />
               <Node name="Helper" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="drawable-hdpi" expanded="True" />
-                <Node name="drawable-ldpi" expanded="True" />
-                <Node name="drawable-mdpi" expanded="True" />
-                <Node name="drawable-xhdpi" expanded="True" />
-                <Node name="menu" expanded="True" />
-                <Node name="values" expanded="True" />
-              </Node>
+              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -43,7 +38,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.DLE" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MonoDevelop.Ide.ItemProperties.connectivesport PreferredExecutionTarget="Android.97f7f290" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

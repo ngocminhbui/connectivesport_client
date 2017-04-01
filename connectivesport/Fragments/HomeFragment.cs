@@ -17,6 +17,7 @@ using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 using Microsoft.Band.Sensors;
+using Microsoft.Band;
 
 namespace connectivesport
 {
@@ -30,7 +31,7 @@ namespace connectivesport
 		FloatingActionButton mbutton;
 		TextView txtcalories;
 		TextView txtstep;
-		TextView txtbeat;
+		TextView txtHeartRate;
 
 		public static HomeFragment NewInstance()
 		{
@@ -56,7 +57,7 @@ namespace connectivesport
 			mRecyclerViewChallenge = rootView.FindViewById<RecyclerView>(Resource.Id.recyclerViewChallenge);
 			txtcalories = rootView.FindViewById<TextView>(Resource.Id.textViewCalories);
 			txtstep = rootView.FindViewById<TextView>(Resource.Id.textViewSteps);
-			txtbeat = rootView.FindViewById<TextView>(Resource.Id.textViewBeat);
+			txtHeartRate = rootView.FindViewById<TextView>(Resource.Id.textViewBeat);
 
 			mLayoutManager = new LinearLayoutManager(this.Activity);
 			mRecyclerView.SetLayoutManager(mLayoutManager);
@@ -94,10 +95,12 @@ namespace connectivesport
 				DistanceSensor sensorDistance = BandConnector.instance.BandClient.SensorManager.CreateDistanceSensor();
 				sensorDistance.ReadingChanged += DistanceSensors_ReadingChanged;
 
-
+				if (BandConnector.instance.BandClient.SensorManager.CurrentHeartRateConsent != UserConsent.Granted)
+					    BandConnector.instance.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this.Activity).Wait();
+				
 				sensorCalories.StartReadings();
 				sensorDistance.StartReadings();
-				//sensorHeartRate.StartReadings();
+				sensorHeartRate.StartReadings();
 			}
 		}
 
@@ -107,7 +110,7 @@ namespace connectivesport
 			{
 				this.Activity.RunOnUiThread(() =>
 				{
-					txtstep.Text = e.SensorReading.TotalDistance.ToString();
+					txtstep.Text = e.SensorReading.DistanceToday.ToString();
 				});
 			}catch (Exception ex)
 			{
@@ -122,7 +125,7 @@ namespace connectivesport
 			{
 				this.Activity.RunOnUiThread(() =>
 				{
-					txtstep.Text = e.SensorReading.HeartRate.ToString();
+					txtHeartRate.Text = e.SensorReading.HeartRate.ToString();
 				});
 			}
 			catch (Exception ex)

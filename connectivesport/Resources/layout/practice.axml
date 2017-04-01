@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff221616">
+    android:background="#FFF3E0">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -21,14 +21,14 @@
         android:textColor="#ffff0024"
         android:gravity="center"
         android:layout_below="@+id/bandimg" />
-    <TextView
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    <LinearLayout
+        android:layout_below="@id/duration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/calories"
-        android:gravity="center"
-        android:layout_below="@id/duration" />
+        android:orientation="vertical">
+        <include
+            layout="@layout/band_frame" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -13,6 +13,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using connectivesport.Helpers;
+
 namespace connectivesport
 {
 	public class FriendDialogFragment : DialogFragment

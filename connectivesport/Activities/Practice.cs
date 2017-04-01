@@ -46,8 +46,8 @@ namespace connectivesport
             time.Elapsed += new ElapsedEventHandler(t_Elapsed);
             
 
-            Button stop = (Button)FindViewById(Resource.Id.stop);
-            Button start = (Button)FindViewById(Resource.Id.start);
+			ImageButton stop = (ImageButton)FindViewById(Resource.Id.stop);
+            ImageButton start = (ImageButton)FindViewById(Resource.Id.start);
             start.Click += (sender, e) =>
             {
                 time.Start();

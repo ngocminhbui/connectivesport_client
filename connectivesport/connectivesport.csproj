@@ -269,6 +269,20 @@
     <AndroidResource Include="Resources\drawable\storemarker50.png" />
     <AndroidResource Include="Resources\drawable\gym.png" />
     <AndroidResource Include="Resources\drawable\addgoalbanner.png" />
+    <AndroidResource Include="Resources\layout\app_bar.axml" />
+    <AndroidResource Include="Resources\layout\headerdrawerlayout.axml" />
+    <AndroidResource Include="Resources\layout\homeLayout.axml" />
+    <AndroidResource Include="Resources\menu\navmenu.xml" />
+    <AndroidResource Include="Resources\menu\action_menu.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_attach.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable\ic_devices_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_question_answer_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_supervisor_account_black_24dp.png" />
+    <None Include="Resources\ARicon.png" />
+    <AndroidResource Include="Resources\drawable\ARicon50.png" />
+    <AndroidResource Include="Resources\drawable\friendmap.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

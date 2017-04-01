@@ -2612,8 +2612,8 @@ namespace connectivesport
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c008e
-			public const int LinearLayout1 = 2131493006;
+			// aapt resource value: 0x7f0c008d
+			public const int LinearLayout1 = 2131493005;
 			
 			// aapt resource value: 0x7f0c00df
 			public const int SportImage = 2131493087;
@@ -2699,8 +2699,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0046
 			public const int always = 2131492934;
 			
-			// aapt resource value: 0x7f0c0093
-			public const int architectView = 2131493011;
+			// aapt resource value: 0x7f0c0092
+			public const int architectView = 2131493010;
 			
 			// aapt resource value: 0x7f0c0019
 			public const int auto = 2131492889;
@@ -2717,35 +2717,35 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0021
 			public const int bottom = 2131492897;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int bottomNavigationView = 2131493004;
+			// aapt resource value: 0x7f0c008b
+			public const int bottomNavigationView = 2131493003;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int btnFacebook = 2131493000;
+			// aapt resource value: 0x7f0c0087
+			public const int btnFacebook = 2131492999;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int buttonAddToDo = 2131493009;
+			// aapt resource value: 0x7f0c0090
+			public const int buttonAddToDo = 2131493008;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int buttonAdduser = 2131492998;
+			// aapt resource value: 0x7f0c0085
+			public const int buttonAdduser = 2131492997;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int buttonCancel = 2131492995;
+			// aapt resource value: 0x7f0c0082
+			public const int buttonCancel = 2131492994;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int buttonChallenge = 2131493029;
+			// aapt resource value: 0x7f0c00a4
+			public const int buttonChallenge = 2131493028;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int buttonPanel = 2131492949;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int buttonSave = 2131492996;
+			// aapt resource value: 0x7f0c0083
+			public const int buttonSave = 2131492995;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int buttonStart = 2131493030;
+			// aapt resource value: 0x7f0c00a5
+			public const int buttonStart = 2131493029;
 			
-			// aapt resource value: 0x7f0c00a9
-			public const int buttoncancellist = 2131493033;
+			// aapt resource value: 0x7f0c00a8
+			public const int buttoncancellist = 2131493032;
 			
 			// aapt resource value: 0x7f0c00dc
 			public const int calories = 2131493084;
@@ -2780,8 +2780,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0047
 			public const int collapseActionView = 2131492935;
 			
-			// aapt resource value: 0x7f0c0095
-			public const int connectband = 2131493013;
+			// aapt resource value: 0x7f0c0094
+			public const int connectband = 2131493012;
 			
 			// aapt resource value: 0x7f0c0058
 			public const int contentPanel = 2131492952;
@@ -2801,26 +2801,26 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0051
 			public const int default_activity_button = 2131492945;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int design_bottom_sheet = 2131493017;
-			
-			// aapt resource value: 0x7f0c00a0
-			public const int design_menu_item_action_area = 2131493024;
+			// aapt resource value: 0x7f0c0098
+			public const int design_bottom_sheet = 2131493016;
 			
 			// aapt resource value: 0x7f0c009f
-			public const int design_menu_item_action_area_stub = 2131493023;
+			public const int design_menu_item_action_area = 2131493023;
 			
 			// aapt resource value: 0x7f0c009e
-			public const int design_menu_item_text = 2131493022;
+			public const int design_menu_item_action_area_stub = 2131493022;
 			
 			// aapt resource value: 0x7f0c009d
-			public const int design_navigation_view = 2131493021;
+			public const int design_menu_item_text = 2131493021;
+			
+			// aapt resource value: 0x7f0c009c
+			public const int design_navigation_view = 2131493020;
 			
 			// aapt resource value: 0x7f0c003c
 			public const int disableHome = 2131492924;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int drawerlayout = 2131493001;
+			// aapt resource value: 0x7f0c0088
+			public const int drawerlayout = 2131493000;
 			
 			// aapt resource value: 0x7f0c00db
 			public const int duration = 2131493083;
@@ -2870,17 +2870,17 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c00ba
 			public const int flm_status = 2131493050;
 			
-			// aapt resource value: 0x7f0c00b2
-			public const int floatingActionButton = 2131493042;
+			// aapt resource value: 0x7f0c00ad
+			public const int floatingActionButton = 2131493037;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int frameLayout = 2131493003;
+			// aapt resource value: 0x7f0c008a
+			public const int frameLayout = 2131493002;
 			
 			// aapt resource value: 0x7f0c00eb
 			public const int friend_item = 2131493099;
 			
-			// aapt resource value: 0x7f0c00ac
-			public const int friendbanner = 2131493036;
+			// aapt resource value: 0x7f0c00ab
+			public const int friendbanner = 2131493035;
 			
 			// aapt resource value: 0x7f0c00b4
 			public const int friendmap = 2131493044;
@@ -2939,8 +2939,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c000e
 			public const int item_touch_helper_previous_elevation = 2131492878;
 			
-			// aapt resource value: 0x7f0c0097
-			public const int largeLabel = 2131493015;
+			// aapt resource value: 0x7f0c0096
+			public const int largeLabel = 2131493014;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int left = 2131492903;
@@ -2954,17 +2954,17 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c00cf
 			public const int line3 = 2131493071;
 			
-			// aapt resource value: 0x7f0c00ab
-			public const int linearLayout = 2131493035;
+			// aapt resource value: 0x7f0c00aa
+			public const int linearLayout = 2131493034;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int listBand = 2131493012;
+			// aapt resource value: 0x7f0c0093
+			public const int listBand = 2131493011;
 			
 			// aapt resource value: 0x7f0c003a
 			public const int listMode = 2131492922;
 			
-			// aapt resource value: 0x7f0c0092
-			public const int listViewToDo = 2131493010;
+			// aapt resource value: 0x7f0c0091
+			public const int listViewToDo = 2131493009;
 			
 			// aapt resource value: 0x7f0c0052
 			public const int list_item = 2131492946;
@@ -2972,8 +2972,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c00b3
 			public const int listview_friendlistmap = 2131493043;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int main_content = 2131493034;
+			// aapt resource value: 0x7f0c00a9
+			public const int main_content = 2131493033;
 			
 			// aapt resource value: 0x7f0c00e8
 			public const int masked = 2131493096;
@@ -2996,20 +2996,20 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0032
 			public const int mini = 2131492914;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int msgText = 2131492999;
+			// aapt resource value: 0x7f0c0086
+			public const int msgText = 2131492998;
 			
 			// aapt resource value: 0x7f0c0035
 			public const int multiply = 2131492917;
 			
-			// aapt resource value: 0x7f0c00ad
-			public const int myImageViewText = 2131493037;
+			// aapt resource value: 0x7f0c00ac
+			public const int myImageViewText = 2131493036;
 			
-			// aapt resource value: 0x7f0c008d
-			public const int nav_view = 2131493005;
+			// aapt resource value: 0x7f0c008c
+			public const int nav_view = 2131493004;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int navigation_header_container = 2131493020;
+			// aapt resource value: 0x7f0c009b
+			public const int navigation_header_container = 2131493019;
 			
 			// aapt resource value: 0x7f0c0049
 			public const int never = 2131492937;
@@ -3071,8 +3071,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c00ef
 			public const int progress = 2131493103;
 			
-			// aapt resource value: 0x7f0c00a3
-			public const int progressBarSync = 2131493027;
+			// aapt resource value: 0x7f0c00a2
+			public const int progressBarSync = 2131493026;
 			
 			// aapt resource value: 0x7f0c0008
 			public const int progress_circular = 2131492872;
@@ -3083,11 +3083,14 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0067
 			public const int radio = 2131492967;
 			
-			// aapt resource value: 0x7f0c00a8
-			public const int recyclerView = 2131493032;
+			// aapt resource value: 0x7f0c00a7
+			public const int recyclerView = 2131493031;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int relativelayout = 2131493002;
+			// aapt resource value: 0x7f0c00b2
+			public const int recyclerViewChallenge = 2131493042;
+			
+			// aapt resource value: 0x7f0c0089
+			public const int relativelayout = 2131493001;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int right = 2131492904;
@@ -3167,14 +3170,14 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0040
 			public const int showTitle = 2131492928;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int smallLabel = 2131493014;
-			
-			// aapt resource value: 0x7f0c009b
-			public const int snackbar_action = 2131493019;
+			// aapt resource value: 0x7f0c0095
+			public const int smallLabel = 2131493013;
 			
 			// aapt resource value: 0x7f0c009a
-			public const int snackbar_text = 2131493018;
+			public const int snackbar_action = 2131493018;
+			
+			// aapt resource value: 0x7f0c0099
+			public const int snackbar_text = 2131493017;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int snap = 2131492896;
@@ -3233,8 +3236,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c00ce
 			public const int text2 = 2131493070;
 			
-			// aapt resource value: 0x7f0c0090
-			public const int textNewToDo = 2131493008;
+			// aapt resource value: 0x7f0c008f
+			public const int textNewToDo = 2131493007;
 			
 			// aapt resource value: 0x7f0c005c
 			public const int textSpacerNoButtons = 2131492956;
@@ -3251,23 +3254,20 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c00b0
 			public const int textViewCalories = 2131493040;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int textViewDate = 2131492994;
+			// aapt resource value: 0x7f0c00a1
+			public const int textViewGoalMessage = 2131493025;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int textViewGoalMessage = 2131493026;
-			
-			// aapt resource value: 0x7f0c00a7
-			public const int textViewName = 2131493031;
+			// aapt resource value: 0x7f0c00a6
+			public const int textViewName = 2131493030;
 			
 			// aapt resource value: 0x7f0c00af
 			public const int textViewSteps = 2131493039;
 			
-			// aapt resource value: 0x7f0c008f
-			public const int textViewTitle = 2131493007;
+			// aapt resource value: 0x7f0c008e
+			public const int textViewTitle = 2131493006;
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int text_input_password_toggle = 2131493025;
+			// aapt resource value: 0x7f0c00a0
+			public const int text_input_password_toggle = 2131493024;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int textinput_counter = 2131492864;
@@ -3293,8 +3293,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0060
 			public const int topPanel = 2131492960;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int touch_outside = 2131493016;
+			// aapt resource value: 0x7f0c0097
+			public const int touch_outside = 2131493015;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int transition_current_scene = 2131492876;
@@ -3302,8 +3302,8 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c000d
 			public const int transition_scene_layoutid_cache = 2131492877;
 			
-			// aapt resource value: 0x7f0c00a4
-			public const int txtProgress = 2131493028;
+			// aapt resource value: 0x7f0c00a3
+			public const int txtProgress = 2131493027;
 			
 			// aapt resource value: 0x7f0c000b
 			public const int up = 2131492875;
@@ -3311,17 +3311,17 @@ namespace connectivesport
 			// aapt resource value: 0x7f0c0041
 			public const int useLogo = 2131492929;
 			
+			// aapt resource value: 0x7f0c00e6
+			public const int user_profile_last_active = 2131493094;
+			
 			// aapt resource value: 0x7f0c00e5
 			public const int user_profile_name = 2131493093;
 			
 			// aapt resource value: 0x7f0c00e3
 			public const int user_profile_photo = 2131493091;
 			
-			// aapt resource value: 0x7f0c00e6
-			public const int user_profile_short_bio = 2131493094;
-			
-			// aapt resource value: 0x7f0c0085
-			public const int userid = 2131492997;
+			// aapt resource value: 0x7f0c0084
+			public const int userid = 2131492996;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int view_offset_helper = 2131492866;

@@ -8,9 +8,11 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
+using connectivesport.Helpers;
 using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
@@ -39,6 +41,9 @@ namespace connectivesport
 
 		List<User> mFriendList;
 
+		FloatingActionButton mbutton;
+
+
 
 
 
@@ -63,26 +68,37 @@ namespace connectivesport
 				mAdapter = new FriendAdapter(this.Activity, mFriendList);
 				mRecyclerView.SetAdapter(mAdapter);
 
+			mbutton = rootView.FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
+			mbutton.Click += startMapActivity;
+
+
+
+
+			mRecyclerView.SetItemClickListener((rv, position, view) =>
+			{
+				//An item has been clicked
+				Context context = view.Context;
+				Intent intent = new Intent(context, typeof(FriendProfileActivity));
+				intent.PutExtra(FriendProfileActivity.USER_ID, mFriendList[position].Id);
+
+				context.StartActivity(intent);
+			});
+
+
+
 
 			return rootView;
 
 		}
 
-
-		List<User> ListFriendDemo()
+		void startMapActivity(object sender, EventArgs e)
 		{
-			List<User> lu = new List<User>();
-
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-			lu.Add(new User { Username = "Luong Quoc An" });
-
-			return lu;
+			Context context = this.Context;
+			Intent intent = new Intent(context, typeof(ViewFriendMapActivity));
+			context.StartActivity(intent);
 		}
+
+
 		async Task<List<User>> ListFriendData()
 		{
 			return await UserManager.DefaultManager.CurrentClient.GetTable<User>().ToListAsync();

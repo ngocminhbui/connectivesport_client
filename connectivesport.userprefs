@@ -1,12 +1,43 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Fragments/UserFragment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Adapters/FriendAdapter.cs">
     <Files>
-      <File FileName="connectivesport/Adapters/MedalAdapter.cs" Line="34" Column="4" />
-      <File FileName="connectivesport/Helper/LocalDataManager.cs" Line="51" Column="94" />
+      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="76" Column="7" />
+      <File FileName="connectivesport/Activities/FriendProfileActivity.cs" Line="58" Column="4" />
+      <File FileName="connectivesport/Fragments/UserFragment.cs" Line="60" Column="4" />
+      <File FileName="connectivesport/Activities/GoalDetailsActivity.cs" Line="59" Column="62" />
+      <File FileName="connectivesport/Helper/LocalDataManager.cs" Line="69" Column="179" />
+      <File FileName="connectivesport/Fragments/FriendFragment.cs" Line="85" Column="7" />
       <File FileName="connectivesport/Adapters/FriendAdapter.cs" Line="57" Column="47" />
-      <File FileName="connectivesport/Fragments/UserFragment.cs" Line="55" Column="4" />
-      <File FileName="connectivesport/Fragments/FriendFragment.cs" Line="65" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="connectivesport" expanded="True">
+            <Node name="connectivesport" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Activities" expanded="True">
+                <Node name="MapActivities" expanded="True" />
+              </Node>
+              <Node name="Adapters" expanded="True">
+                <Node name="FriendAdapter.cs" selected="True" />
+              </Node>
+              <Node name="Fragments" expanded="True" />
+              <Node name="Helper" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+                <Node name="drawable-hdpi" expanded="True" />
+                <Node name="drawable-ldpi" expanded="True" />
+                <Node name="drawable-mdpi" expanded="True" />
+                <Node name="drawable-xhdpi" expanded="True" />
+                <Node name="menu" expanded="True" />
+                <Node name="values" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

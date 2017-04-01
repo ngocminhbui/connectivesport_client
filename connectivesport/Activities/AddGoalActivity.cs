@@ -29,7 +29,7 @@ namespace connectivesport
 			// Create your application here
 			SetContentView(Resource.Layout.activity_add_goal);
 
-			_dateDisplay = FindViewById<TextView>(Resource.Id.textViewDate);
+			//_dateDisplay = FindViewById<TextView>(Resource.Id.textViewDate);
 			Spinner spinner = FindViewById<Spinner>(Resource.Id.spinnerSport);
 			Spinner spinnerGoalType = FindViewById<Spinner>(Resource.Id.spinnerGoalType);
 			Spinner spinnerGoalTime = FindViewById<Spinner>(Resource.Id.spinnerGoalTime);
@@ -80,16 +80,13 @@ namespace connectivesport
 		}
 
 
-		void onSpinnerGoalTypeSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-		{
-			throw new NotImplementedException();
-		}
+
 
 		void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
 		{
 			Spinner spinner = (Spinner)sender;
-
-			string toast = string.Format("The planet is {0}", spinner.GetItemAtPosition(e.Position));
+			//_goal.SportId = spinner.GetItemAtPosition(e.Position);
+			string toast = string.Format("The planet is {0}", e.Position.ToString());
 			Toast.MakeText(this, toast, ToastLength.Long).Show();
 		}
 

@@ -40,6 +40,7 @@ namespace connectivesport
 
 		MedalAdapter mAdapter;
 
+		public const string USER_ID = "0";
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{

@@ -54,7 +54,12 @@ namespace connectivesport
             return result;
         }
 
-        private List<User> loadUser()
+		internal User getUserById(string userID)
+		{
+			return lsUser.Find(x => x.Id == userID);
+		}
+
+		private List<User> loadUser()
         {
             List<User> result = new List<User>();
 			//User user1 = new User { UserID = "user1", Id = "user1", Username = "Luong Quoc An", Email = "lqa@gmail.com", LastLocationX = 10.7549819, LastLocationY = 106.6614459, LastLogin = DateTime.Now, AvatarURL = "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/11207295_792318130877638_232756703618362371_n.jpg?oh=d3e1f303d32252ae230a592132683b24&oe=595C1C5B" };

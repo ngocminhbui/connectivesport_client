@@ -23,6 +23,7 @@ namespace connectivesport
 	public class HomeFragment : Fragment
 	{
 		RecyclerView mRecyclerView;
+		RecyclerView mRecyclerViewChallenge;
 		RecyclerView.LayoutManager mLayoutManager;
 		GoalAdapter mAdapter;
 		List<Goal> mGoalList;
@@ -52,6 +53,7 @@ namespace connectivesport
 
 			var rootView = inflater.Inflate(Resource.Layout.fragment_home, container, false);
 			mRecyclerView = rootView.FindViewById<RecyclerView>(Resource.Id.recyclerView);
+			mRecyclerViewChallenge = rootView.FindViewById<RecyclerView>(Resource.Id.recyclerViewChallenge);
 			txtcalories = rootView.FindViewById<TextView>(Resource.Id.textViewCalories);
 			txtstep = rootView.FindViewById<TextView>(Resource.Id.textViewSteps);
 			txtbeat = rootView.FindViewById<TextView>(Resource.Id.textViewBeat);

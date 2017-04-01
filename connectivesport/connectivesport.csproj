@@ -241,6 +241,7 @@
     <Compile Include="Helper\LocalDataManager.cs" />
     <Compile Include="Fragments\BandConnectFragment.cs" />
     <Compile Include="Adapters\BandAdapter.cs" />
+    <Compile Include="Activities\FriendProfileActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

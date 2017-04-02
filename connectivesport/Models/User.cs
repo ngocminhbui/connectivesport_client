@@ -21,7 +21,7 @@ namespace connectivesport
         }
 
 
-        [JsonProperty(PropertyName = "user-id")]
+        [JsonProperty(PropertyName = "UserID")]
         public string UserID { get; set; }
 
 

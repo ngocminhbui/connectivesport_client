@@ -41,12 +41,15 @@ namespace connectivesport
 			return fragment;
 		}
 
-		public override void OnCreate(Bundle savedInstanceState)
+		public override async void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
 			// Create your fragment here
-			mGoalList = LocalDataManager.instance.lsGoal;
+			if (Settings.User == null)
+				Settings.User= await DataManagement.instance.GetApplicationUser(Settings.fbid); //force to get user before get list
+			mGoalList = await DataManagement.instance.getGoal(Settings.User);
+			//mGoalList = LocalDataManager.instance.lsGoal;
 			mChallengeList = LocalDataManager.instance.lsChallenge;
 		}
 
@@ -65,6 +68,26 @@ namespace connectivesport
 			mRecyclerView.SetLayoutManager(mLayoutManager);
 
 			// Plug in my adapter:
+			PlugGoal();
+			PlugChallenge();
+
+
+
+
+
+
+			mbutton = rootView.FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
+			mbutton.Click += AddNewGoal;
+				
+			return rootView;
+		}
+
+		public async Task PlugGoal()
+		{
+			if (mGoalList == null)
+				//force goal list
+				mGoalList = await DataManagement.instance.getGoal(Settings.User);
+
 			mAdapter = new GoalAdapter(this.Activity, mGoalList);
 			mRecyclerView.SetAdapter(mAdapter);
 
@@ -77,7 +100,15 @@ namespace connectivesport
 
 				context.StartActivity(intent);
 			});
+		}
 
+		public async Task PlugChallenge()
+		{
+			if (mChallengeList == null)
+				//force goal list
+				mChallengeList = await DataManagement.instance.getChallenge(Settings.User);
+
+			
 			mRecyclerViewChallenge.SetLayoutManager(new LinearLayoutManager(this.Activity));
 
 			var adapterChallenge = new ChallengeAdapter(this.Activity, mChallengeList);
@@ -92,10 +123,6 @@ namespace connectivesport
 
 				context.StartActivity(intent);
 			});
-			mbutton = rootView.FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
-			mbutton.Click += AddNewGoal;
-				
-			return rootView;
 		}
 
 		public override void OnResume()

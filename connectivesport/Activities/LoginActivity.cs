@@ -17,7 +17,7 @@ using Newtonsoft.Json.Linq;
 
 namespace connectivesport
 {
-	[Activity(Label = "LoginActivity", MainLauncher = false)]
+	[Activity(Label = "LoginActivity", MainLauncher = true)]
     public class LoginActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -25,6 +25,10 @@ namespace connectivesport
 			base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_login);
+
+
+
+
 
             Button login = (Button)FindViewById(Resource.Id.btnFacebook);
             login.Click += async (sender , e) =>
@@ -40,35 +44,34 @@ namespace connectivesport
                     FacebookClient fb = new FacebookClient(s);
                     JToken profile = JToken.Parse(fb.Get("me/?fields=picture,name,email").ToString());
 
-                    var UserTable = UserManager.DefaultManager.CurrentClient.GetTable<User>();
-                    var test = from each in UserTable where each.UserID == (string)profile["id"] select each.UserID;
-                    if (test.Parameters.Count == 0)
-                    {
-                        User nUser = new User() { Username = (string)profile["name"], AvatarURL = (string)profile["picture"]["data"]["url"], Email = (string)profile["email"], LastLocationX = 5.3, LastLocationY = 3.2, UserID = (string)profile["id"], LastLogin = DateTime.Now, RegistrationDate = DateTime.Now };
-                        await UserTable.InsertAsync(nUser);
 
-                        /*JToken friends = JToken.Parse(fb.Get("me/friends").ToString());
-                        for (int i = 0; i < friends["data"].Count(); i++)
-                        {
-                            string id = friends["data"][i]["id"].ToString();
-                            JToken friend = JToken.Parse(fb.Get(id + "/?fields=picture,name").ToString());
-                            string name = friend["name"].ToString();
-                            string url = friend["picture"]["data"]["url"].ToString();
-                            Friend nFriend = new Friend() { AcceptDate = DateTime.Now, valid = true, RequestUserId = (string)friend["id"], AcceptUserId = (string)profile["id"], UserId = "abc"};
-                            await FriendTable.InsertAsync(nFriend);
-                        }*/
-                    }
+					await PushNewUser(profile,(string)profile["id"]);
 
-                    /*var contextEdit = contextRef.Edit();
-                    contextEdit.PutString("FBToken", s);
-                    contextEdit.PutBoolean("IsLogin", true);
-                    contextEdit.Commit();*/
 
-                    StartActivity(typeof(Practice));
+
+
+					Settings.fbid = (string)profile["id"];
+                    GetApplicationUser((string)profile["id"]);
+					StartActivity(typeof(MainActivity));
                 }
             };
 		}
 
+		public async Task PushNewUser(JToken profile,string fbid)
+		{
+			if ( await DataManagement.instance.IsUserExisted(fbid) == false)
+			{
+				User nUser = new User() { Username = (string)profile["name"], AvatarURL = (string)profile["picture"]["data"]["url"], Email = (string)profile["email"], LastLocationX = 5.3, LastLocationY = 3.2, UserID = (string)profile["id"], LastLogin = DateTime.Now, RegistrationDate = DateTime.Now };
+				 
+				await DataManagement.instance.client.GetTable<User>().InsertAsync(nUser);
+
+			}
+		}
+
+		public async Task GetApplicationUser(string fbid)
+		{
+			Settings.User = await DataManagement.instance.GetApplicationUser(fbid);
+		}
         private MobileServiceUser user;
 
         private async Task<bool> Authenticate()

@@ -131,9 +131,9 @@ namespace connectivesport
 			this.map.MyLocationEnabled = true;
 
 
-			this.map.MyLocationChange += (object sender, GoogleMap.MyLocationChangeEventArgs e) => { 
-			
+			this.map.MyLocationChange += (object sender, GoogleMap.MyLocationChangeEventArgs e) => {
 
+				Settings.currentLocation = e.Location;
 				this._currentLocation = e.Location;
 				if (!setCamera)
 				{

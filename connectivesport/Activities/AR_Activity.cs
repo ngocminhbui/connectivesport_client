@@ -69,7 +69,7 @@ namespace connectivesport
 
         private void Clock_Elapsed(object sender, ElapsedEventArgs e)
         {
-            architectView.SetLocation(10.752, 106.6617, 1.0);
+            architectView.SetLocation(Settings.currentLocation.Latitude, Settings.currentLocation.Longitude 1.0);
         }
 
         protected override void OnResume()
@@ -122,7 +122,7 @@ namespace connectivesport
                 try
                 {
                     architectView.Load(SAMPLE_WORLD_URL);
-                    architectView.SetLocation(10.752, 106.6617, 1.0);
+                    architectView.SetLocation(Settings.currentLocation.Latitude, Settings.currentLocation.Longitude, 1.0);
                     clock.Start();
                 }
                 catch (Exception ex)

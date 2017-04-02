@@ -21,7 +21,9 @@ namespace connectivesport
 		TextView _dateDisplay;
 		Button _cancelButton;
 		Button _saveButton;
-		Goal _goal;
+		Goal _goal=new Goal();
+		Spinner spinner;
+		EditText _goalValue;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -30,11 +32,12 @@ namespace connectivesport
 			SetContentView(Resource.Layout.activity_add_goal);
 
 			//_dateDisplay = FindViewById<TextView>(Resource.Id.textViewDate);
-			Spinner spinner = FindViewById<Spinner>(Resource.Id.spinnerSport);
+			spinner = FindViewById<Spinner>(Resource.Id.spinnerSport);
 			Spinner spinnerGoalType = FindViewById<Spinner>(Resource.Id.spinnerGoalType);
 			Spinner spinnerGoalTime = FindViewById<Spinner>(Resource.Id.spinnerGoalTime);
 			_cancelButton = FindViewById<Button>(Resource.Id.buttonCancel);
 			_saveButton = FindViewById<Button>(Resource.Id.buttonSave);
+			_goalValue = FindViewById<EditText>(Resource.Id.editTextVal);
 
 			_cancelButton.Click += (sender, e) => OnBackPressed();
 
@@ -46,13 +49,14 @@ namespace connectivesport
 			//	spinner.Adapter = a;
 			//});
 
-			var a = new SportAdapter(this, LocalDataManager.instance.lsSport);
-			spinner.Adapter = a;
-			spinner.ItemSelected += spinner_ItemSelected;
+
+			PlugSport();
+
+
 
 			var adapterGoalType = ArrayAdapter.CreateFromResource(
 				this, Resource.Array.goal_type, Android.Resource.Layout.SimpleSpinnerItem);
-			adapterGoalType.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+				adapterGoalType.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
 			var adapterGoalTime = ArrayAdapter.CreateFromResource(
 				this, Resource.Array.goal_time, Android.Resource.Layout.SimpleSpinnerItem);
@@ -61,17 +65,51 @@ namespace connectivesport
 
 			spinnerGoalTime.Adapter = adapterGoalTime;
 
+			spinnerGoalTime.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+			{
+				Spinner spinnerTime = (Spinner)sender;
 
+				goalTime = string.Format("{0}", spinnerTime.GetItemAtPosition(e.Position));
+			};
+
+			spinnerGoalType.ItemSelected += (object sender, AdapterView.ItemSelectedEventArgs e) =>
+			{
+				Spinner spinnerType = (Spinner)sender;
+
+				goalType = string.Format("{0}", spinnerType.GetItemAtPosition(e.Position));
+			};
 
 
 			//spinner.ItemSelected += onSpinnerGoalTypeSelected;
 		}
 
+
+		string goalTime;
+		string goalType;
 		void AddNewGoal()
 		{
 			//throw new NotImplementedException();
+			_goal.Count = int.Parse(_goalValue.Text);
+			_goal.Current_Count = 0;
+			Sport sport = LocalDataManager.instance.getSportById(_goal.SportId);
+			_goal.CustomMessage = sport.Name + " " + _goal.Count + " " + goalType + " a " + goalTime;
+			//LocalDataManager.instance.lsGoal.Add(_goal);
+			DataManagement.instance.addGoal(Goal, Settings.User);
 			Finish();
 		}
+
+
+		List<Sport> ls;
+		public async Task PlugSport()
+		{
+			ls = await DataManagement.instance.getSport();
+
+			var a = new SportAdapter(this, ls);
+			spinner.Adapter = a;
+			spinner.ItemSelected += spinner_ItemSelected;
+
+		}
+
 
 		async Task<List<Sport>> ListSportData()
 		{
@@ -84,10 +122,17 @@ namespace connectivesport
 
 		void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
 		{
-			Spinner spinner = (Spinner)sender;
-			//_goal.SportId = spinner.GetItemAtPosition(e.Position);
-			//string toast = string.Format("The planet is {0}", e.Position.ToString());
-			//Toast.MakeText(this, toast, ToastLength.Long).Show();
+			try
+			{
+				Spinner spinner = (Spinner)sender;
+				_goal.SportId = ls[e.Position].Id;
+				//_goal.SportId = spinner.GetItemAtPosition(e.Position);
+				//string toast = string.Format("The planet is {0}", e.Position.ToString());
+				//Toast.MakeText(this, toast, ToastLength.Long).Show();
+			}
+			catch
+			{
+			}
 		}
 
 		void DateSelect_OnClick(object sender, EventArgs eventArgs)

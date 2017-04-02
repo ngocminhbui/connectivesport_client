@@ -1,22 +1,30 @@
 ﻿<Properties StartupConfiguration="{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Activities/AR_Activity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs">
     <Files>
-      <File FileName="connectivesport/Helper/LocalDataManager.cs" Line="110" Column="44" />
+      <File FileName="connectivesport/Helper/LocalDataManager.cs" Line="78" Column="52" />
       <File FileName="connectivesport/Activities/ChallengeDetailsActivity.cs" Line="29" Column="25" />
       <File FileName="connectivesport/Activities/GoalDetailsActivity.cs" Line="92" Column="4" />
-      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="91" Column="37" />
-      <File FileName="connectivesport/Activities/AddGoalActivity.cs" Line="90" Column="6" />
+      <File FileName="connectivesport/Fragments/HomeFragment.cs" Line="131" Column="1" />
+      <File FileName="connectivesport/Activities/AddGoalActivity.cs" Line="117" Column="23" />
       <File FileName="connectivesport/Resources/Resource.designer.cs" Line="1" Column="1" />
       <File FileName="connectivesport/Activities/AR_Activity.cs" Line="121" Column="5" />
       <File FileName="connectivesport/Fragments/DatePickerFragment.cs" Line="12" Column="21" />
       <File FileName="connectivesport/Assets/samples/08_BrowsingPois_2_AddingRadar/js/addingradar.js" Line="1" Column="1" />
+      <File FileName="connectivesport/Activities/LoginActivity.cs" Line="42" Column="61" />
+      <File FileName="connectivesport/Activities/MainActivity.cs" Line="31" Column="4" />
+      <File FileName="connectivesport/Fragments/BandConnectFragment.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Models/User.cs" Line="57" Column="3" />
+      <File FileName="connectivesport/ChallengeAdapter.cs" Line="40" Column="3" />
+      <File FileName="connectivesport/Fragments/FriendFragment.cs" Line="1" Column="1" />
+      <File FileName="connectivesport/Helpers/Settings.cs" Line="49" Column="49" />
+      <File FileName="connectivesport/Activities/MapActivities/ViewFriendMapActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.DLE" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MonoDevelop.Ide.ItemProperties.connectivesport AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.366ac6f3" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

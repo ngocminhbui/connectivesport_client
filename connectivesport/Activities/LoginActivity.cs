@@ -17,7 +17,7 @@ using Newtonsoft.Json.Linq;
 
 namespace connectivesport
 {
-	[Activity(Label = "LoginActivity", MainLauncher = false)]
+	[Activity(Label = "LoginActivity", MainLauncher = true)]
     public class LoginActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -34,13 +34,13 @@ namespace connectivesport
                 {
                     string token = user.MobileServiceAuthenticationToken;
 
-                    Newtonsoft.Json.Linq.JToken x = await UserManager.DefaultManager.CurrentClient.InvokeApiAsync("/.auth/me");
+                    Newtonsoft.Json.Linq.JToken x = await DataManagement.instance.client.InvokeApiAsync("/.auth/me");
                     string s = (string)x[0]["access_token"];
 
                     FacebookClient fb = new FacebookClient(s);
                     JToken profile = JToken.Parse(fb.Get("me/?fields=picture,name,email").ToString());
 
-                    var UserTable = UserManager.DefaultManager.CurrentClient.GetTable<User>();
+                    var UserTable = DataManagement.instance.client.GetTable<User>();
                     var test = from each in UserTable where each.UserID == (string)profile["id"] select each.UserID;
                     if (test.Parameters.Count == 0)
                     {
@@ -64,7 +64,8 @@ namespace connectivesport
                     contextEdit.PutBoolean("IsLogin", true);
                     contextEdit.Commit();*/
 
-                    StartActivity(typeof(Practice));
+                    DataManagement.instance.Userid = (string)profile["id"];
+                    StartActivity(typeof(MainActivity));
                 }
             };
 		}
@@ -77,7 +78,7 @@ namespace connectivesport
             try
             {
                 // Sign in with Facebook login using a server-managed flow.
-                user = await UserManager.DefaultManager.CurrentClient.LoginAsync(this,
+                user = await DataManagement.instance.client.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
 
                 success = true;

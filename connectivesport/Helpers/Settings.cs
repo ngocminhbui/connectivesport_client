@@ -1,5 +1,6 @@
 
 // Helpers/Settings.cs This file was automatically added when you installed the Settings Plugin. If you are not using a PCL then comment this file back in to use it.
+using Android.Locations;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 
@@ -24,15 +25,16 @@ namespace connectivesport
 
     private const string SettingsKey = "settings_key";
     private static readonly string SettingsDefault = string.Empty;
-    
-    #endregion
+        internal static Location currentLocation;
+
+        #endregion
 
 
 
 
 
 
-    public static string GeneralSettings
+        public static string GeneralSettings
     {
       get
       {

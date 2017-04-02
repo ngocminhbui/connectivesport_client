@@ -21,29 +21,24 @@ namespace connectivesport
         public static DataManagement instance = new DataManagement();
         public static List<Medal> medal_list;
         public static List<Sport> sport_list;
-        public static List<Friend> friend_list;
+        public static List<User> friend_list;
+        public string Userid;
+        public MobileServiceClient client = new MobileServiceClient(Constants.ApplicationURL);
 
-        public async Task getData(MobileServiceClient client)
+        public async Task getData()
         {
-            medal_list = await client.GetTable<Medal>().ToListAsync();
-            sport_list = await client.GetTable<Sport>().ToListAsync();
-            friend_list = await client.GetTable<Friend>().ToListAsync();
+            medal_list = await this.client.GetTable<Medal>().ToListAsync();
+            sport_list = await this.client.GetTable<Sport>().ToListAsync();
 
             return;
         }
 
-        public void getFriendsList(string token)
+        public async Task<List<Medal>> GetUserAchievement()
         {
-            FacebookClient fb = new FacebookClient(token);
-            JToken friends = JToken.Parse(fb.Get("me/friends").ToString());
-            for(int i = 0; i < friends["data"].Count() ; i++)
-            {
-                string id = friends["data"][i]["id"].ToString();
-                JToken friend = JToken.Parse(fb.Get(id + "/?fields=picture,name").ToString());
-                string name = friend["name"].ToString();
-                string url = friend["picture"]["data"]["url"].ToString();
-                //friend_list.Add(new FriendInfo(name, url));
-            }
+            List<Medal> result = new List<Medal>();
+            var AchievementTable = client.GetTable<Achievement>();
+
+            return result;
         }
     }
 }

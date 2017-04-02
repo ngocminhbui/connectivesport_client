@@ -22,7 +22,7 @@ using Android.Util;
 namespace connectivesport
 {
 
-	[Activity(Label = "ConnectiveSport", MainLauncher = true, Theme = "@style/BaseTheme")]
+	[Activity(Label = "ConnectiveSport", MainLauncher = false, Theme = "@style/BaseTheme")]
 
 	public class MainActivity : AppCompatActivity
 	{

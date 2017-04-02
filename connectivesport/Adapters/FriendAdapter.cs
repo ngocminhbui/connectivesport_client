@@ -53,6 +53,7 @@ namespace connectivesport
 			vh.Text.Text = _friendList[position].Username;
 			if (_friendList[position].AvatarURL != null)
 			{
+				
 				var drawableImage = _activity.Resources.GetIdentifier(_friendList[position].AvatarURL, "drawable", _activity.PackageName);
 				vh.Avatar.SetImageResource(drawableImage);
 				//var imageBitmap = GetImageBitmapFromUrl(_friendList[position].AvatarURL);

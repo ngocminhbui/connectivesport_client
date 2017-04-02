@@ -19,7 +19,7 @@ using System.Timers;
 namespace connectivesport
 {
     [Activity(Label = "WikitudeActivity", ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.KeyboardHidden)]
-    public class TestAR : Activity, ArchitectView.IArchitectUrlListener
+    public class ARActivity : Activity, ArchitectView.IArchitectUrlListener
     {
         protected ArchitectView architectView;
 
@@ -51,7 +51,7 @@ namespace connectivesport
             int requiredFeatures = ArchitectStartupConfiguration.Features.Geo;
             MissingDeviceFeatures missingDeviceFeatures = ArchitectView.isDeviceSupported(this, requiredFeatures);
 
-            clock.Interval = 1000;
+            clock.Interval = 3000;
             if ((ArchitectView.getSupportedFeaturesForDevice(Android.App.Application.Context) & requiredFeatures) == requiredFeatures)
             {
                 architectView.OnCreate(startupConfiguration);
@@ -69,7 +69,7 @@ namespace connectivesport
 
         private void Clock_Elapsed(object sender, ElapsedEventArgs e)
         {
-            architectView.SetLocation(10.7527633, 106.6630345, 1.0);
+            architectView.SetLocation(10.752, 106.6617, 1.0);
         }
 
         protected override void OnResume()
@@ -122,7 +122,7 @@ namespace connectivesport
                 try
                 {
                     architectView.Load(SAMPLE_WORLD_URL);
-                    architectView.SetLocation(10.7527633, 106.6630345, 1.0);
+                    architectView.SetLocation(10.752, 106.6617, 1.0);
                     clock.Start();
                 }
                 catch (Exception ex)

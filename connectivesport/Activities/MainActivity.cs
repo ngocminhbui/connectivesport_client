@@ -16,10 +16,13 @@ using Android.Support.V7.App;
 
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
+using Gcm.Client;
+using Android.Util;
+
 namespace connectivesport
 {
 
-	[Activity(Label = "ConnectiveSport", MainLauncher = false, Theme = "@style/BaseTheme")]
+	[Activity(Label = "ConnectiveSport", MainLauncher = true, Theme = "@style/BaseTheme")]
 
 	public class MainActivity : AppCompatActivity
 	{
@@ -39,6 +42,7 @@ namespace connectivesport
 				SetUpDrawerContent(navigationView);
 			}
 
+			RegisterWithGCM();
 			bottomNavigationView.NavigationItemSelected += (sender, e) =>
 			{
 				Fragment selectedFragment = HomeFragment.NewInstance();
@@ -68,6 +72,23 @@ namespace connectivesport
 			transaction1.Commit();
 		}
 
+		 private void RegisterWithGCM()
+		{
+			try
+			{
+				// Check to ensure everything's set up right
+				GcmClient.CheckDevice(this);
+				GcmClient.CheckManifest(this);
+
+				// Register for push notifications
+				Log.Info("MainActivity", "Registering...");
+				GcmClient.Register(this, MyBroadcastReceiver.SENDER_IDS);
+				//GcmClient.UnRegister(this);
+			}
+			catch (Exception e)
+			{
+			}
+		}
 		private void SetUpDrawerContent(NavigationView navigationView)
 		{
 			navigationView.NavigationItemSelected += (object sender, NavigationView.NavigationItemSelectedEventArgs e) =>

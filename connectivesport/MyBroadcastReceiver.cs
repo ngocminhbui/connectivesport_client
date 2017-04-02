@@ -5,6 +5,9 @@ using Android.Content;
 using Android.Util;
 using Gcm.Client;
 using WindowsAzure.Messaging;
+using System.Net.Http;
+using System;
+using System.Threading.Tasks;
 
 
 [assembly: Permission(Name = "@PACKAGE_NAME@.permission.C2D_MESSAGE")]
@@ -51,12 +54,46 @@ namespace connectivesport
 			if (!intent.Extras.ContainsKey("message"))
 				return false;
 
-			message = intent.Extras.Get("message").ToString();
 
+			message = intent.Extras.Get("message").ToString();
+			var title = intent.Extras.Get("title").ToString();
+
+			var activityIntent = new Intent(context, typeof(AddUserActivity));
+			var payloadValue = GetPayload(intent);
+			activityIntent.PutExtra("payload", payloadValue);
+			activityIntent.SetFlags(ActivityFlags.SingleTop | ActivityFlags.ClearTop);
+			var pendingIntent = PendingIntent.GetActivity(context, 0, activityIntent, PendingIntentFlags.UpdateCurrent);
+
+			var n = new Notification.Builder(context);
+			n.SetSmallIcon(Resource.Drawable.ic_noti);
+			n.SetLights(global::Android.Graphics.Color.Blue, 300, 1000);
+			n.SetContentIntent(pendingIntent);
+			n.SetContentTitle(title);
+			n.SetTicker(message);
+			n.SetLargeIcon(global::Android.Graphics.BitmapFactory.DecodeResource(context.Resources, Resource.Drawable.ic_noti));
+			n.SetSmallIcon(Resource.Drawable.ic_noti);
+			n.SetContentText(message);
+			n.SetVibrate(new long[] {
+				200,
+				200,
+				100,
+			});
+
+			var nm = NotificationManager.FromContext(context);
+			nm.Notify(0, n.Build());
 
 
 			return true;
 		}
+
+		internal static string GetPayload(Intent intent)
+		{
+			if (intent.Extras.ContainsKey("payload"))
+				return intent.Extras.Get("payload").ToString();
+
+			return null;
+		}
+
 	}
 
 
@@ -77,37 +114,33 @@ namespace connectivesport
 			MyBroadcastReceiver.HandlePushNotification(context, intent);
 		}
 
-	
+
 
 		protected override void OnRegistered(Context context, string registrationId)
 		{
 			Log.Verbose(MyBroadcastReceiver.TAG, "GCM Registered: " + registrationId);
+			Settings.PNSRegistrationId = registrationId;
 			RegistrationID = registrationId;
 
+			//begin registration to hub
+
+			var tags = new List<string>() { "all" }; // create tags if you want
+																	   //var tags = new List<string>() { };
+
+			InvokeAPIRegistration(new DeviceRegistration() { Platform = "Android", Handle = registrationId, Tags = tags.ToArray() });
 
 
-			Hub = new NotificationHub(Constants.NotificationHubName, Constants.ListenConnectionString,
-										context);
-			try
-			{
-				Hub.UnregisterAll(registrationId);
-			}
-			catch (Java.Lang.Exception ex)
-			{
-				Log.Error(MyBroadcastReceiver.TAG, ex.Message);
-			}
+		}
 
-			var tags = new List<string>() { "falcons" }; // create tags if you want
-			//var tags = new List<string>() { };
-
-			try
-			{
-				var hubRegistration = Hub.Register(registrationId, tags.ToArray());
-			}
-			catch (Java.Lang.Exception ex)
-			{
-				Log.Error(MyBroadcastReceiver.TAG, ex.Message);
-			}
+		public async Task InvokeAPIRegistration(DeviceRegistration deviceRegistration)
+		{
+			var hubregistrationid=await MobileClient.client.InvokeApiAsync<DeviceRegistration, string>("Notification/registerWithHub", deviceRegistration, HttpMethod.Put, null);
+			Settings.HubRegistrationId = hubregistrationid;
+		}
+		private async Task InvokeAPI()
+		{
+			var ret = await MobileClient.client.InvokeApiAsync<string>("Notification/HubRegistration", HttpMethod.Get, null);
+			Log.Info(ret, ret);
 		}
 
 		protected override void OnError(Context context, string errorId)

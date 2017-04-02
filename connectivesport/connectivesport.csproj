@@ -178,6 +178,12 @@
     <Reference Include="Xamarin.GooglePlayServices.Places">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Places.42.1001.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Places.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\AR_Activity.cs" />
@@ -237,6 +243,11 @@
     <Compile Include="Fragments\BandConnectFragment.cs" />
     <Compile Include="Adapters\BandAdapter.cs" />
     <Compile Include="Activities\FriendProfileActivity.cs" />
+    <Compile Include="ChallengeAdapter.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Helpers\MobileClient.cs" />
+    <Compile Include="Activities\ChallengeDetailsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -295,6 +306,12 @@
     <None Include="Resources\ARicon.png" />
     <AndroidResource Include="Resources\drawable\ARicon50.png" />
     <AndroidResource Include="Resources\drawable\friendmap.png" />
+    <AndroidResource Include="Resources\layout\item_challenge.axml" />
+    <AndroidResource Include="Resources\drawable\ic_map_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_noti.png" />
+    <AndroidResource Include="Resources\layout\details_challenge.axml" />
+    <AndroidResource Include="Resources\drawable\avatar_han.jpg" />
+    <AndroidResource Include="Resources\drawable\avatar_son.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

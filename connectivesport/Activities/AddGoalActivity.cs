@@ -86,8 +86,8 @@ namespace connectivesport
 		{
 			Spinner spinner = (Spinner)sender;
 			//_goal.SportId = spinner.GetItemAtPosition(e.Position);
-			string toast = string.Format("The planet is {0}", e.Position.ToString());
-			Toast.MakeText(this, toast, ToastLength.Long).Show();
+			//string toast = string.Format("The planet is {0}", e.Position.ToString());
+			//Toast.MakeText(this, toast, ToastLength.Long).Show();
 		}
 
 		void DateSelect_OnClick(object sender, EventArgs eventArgs)

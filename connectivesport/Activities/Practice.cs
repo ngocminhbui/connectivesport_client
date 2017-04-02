@@ -23,6 +23,18 @@ namespace connectivesport
         int sec = 0, min = 0, hour = 0;
         Timer time;
 
+		TextView txtcalories;
+
+		TextView txtstep;
+
+		TextView txtHeartRate;
+
+
+
+
+
+
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -45,6 +57,9 @@ namespace connectivesport
             time.Interval = 1000;
             time.Elapsed += new ElapsedEventHandler(t_Elapsed);
             
+			txtcalories = FindViewById<TextView>(Resource.Id.textViewCalories);
+			txtstep = FindViewById<TextView>(Resource.Id.textViewSteps);
+			txtHeartRate = FindViewById<TextView>(Resource.Id.textViewBeat);
 
 			ImageButton stop = (ImageButton)FindViewById(Resource.Id.stop);
             ImageButton start = (ImageButton)FindViewById(Resource.Id.start);
@@ -56,6 +71,25 @@ namespace connectivesport
             {
                 time.Stop();
             };
+
+			if (BandConnector.instance.isConnected())
+			{
+				CaloriesSensor sensorCalories = BandConnector.instance.BandClient.SensorManager.CreateCaloriesSensor();
+				sensorCalories.ReadingChanged += CaloriesSensors_ReadingChanged;
+
+				HeartRateSensor sensorHeartRate = BandConnector.instance.BandClient.SensorManager.CreateHeartRateSensor();
+				sensorHeartRate.ReadingChanged += HeartRateSensors_ReadingChanged;
+
+				DistanceSensor sensorDistance = BandConnector.instance.BandClient.SensorManager.CreateDistanceSensor();
+				sensorDistance.ReadingChanged += DistanceSensors_ReadingChanged;
+
+				//if (BandConnector.instance.BandClient.SensorManager.CurrentHeartRateConsent != UserConsent.Granted)
+				//	BandConnector.instance.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this).Wait();
+
+				sensorCalories.StartReadings();
+				sensorDistance.StartReadings();
+				//sensorHeartRate.StartReadings();
+			}
             
         }
 
@@ -81,19 +115,63 @@ namespace connectivesport
 
 
 
-        protected override async void OnResume()
+        protected override void OnResume()
         {
             base.OnResume();
 
-            if (useBand)
-            {
-                CaloriesSensor sensors = BandConnector.instance.BandClient.SensorManager.CreateCaloriesSensor();
-                //sensors.ReadingChanged += Sensors_ReadingChanged;
-
-				if (BandConnector.instance.BandClient.SensorManager.CurrentHeartRateConsent != UserConsent.Granted)
-					await BandConnector.instance.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this);
-                sensors.StartReadings();
-            }
+        
         }
-    }
+
+		void DistanceSensors_ReadingChanged(object sender, IBandSensorEventEventArgs<IBandDistanceEvent> e)
+		{
+			try
+			{
+				long curStep = e.SensorReading.DistanceToday;
+				RunOnUiThread(() =>
+				{
+					txtstep.Text = (e.SensorReading.DistanceToday - curStep).ToString();
+				});
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+
+			}
+		}
+
+		void HeartRateSensors_ReadingChanged(object sender, IBandSensorEventEventArgs<IBandHeartRateEvent> e)
+		{
+			
+			try
+			{
+				RunOnUiThread(() =>
+				{
+					txtHeartRate.Text = e.SensorReading.HeartRate.ToString();
+				});
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+
+			}
+		}
+
+		void CaloriesSensors_ReadingChanged(object sender, IBandSensorEventEventArgs<IBandCaloriesEvent> e)
+		{
+			try
+			{
+				long curCategories = e.SensorReading.CaloriesToday;
+
+				RunOnUiThread(() =>
+				{
+					txtcalories.Text = (e.SensorReading.CaloriesToday - curCategories).ToString();
+				});
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex);
+
+			}
+		}
+}
 }

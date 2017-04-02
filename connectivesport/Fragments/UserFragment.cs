@@ -30,7 +30,10 @@ namespace connectivesport
 
 			// Create your fragment here
 			mMedalList = LocalDataManager.instance.lsMedal;
+			user = LocalDataManager.instance.lsUser[0];
 		}
+
+		User user;
 
 		RecyclerView mRecyclerView;
 
@@ -57,6 +60,12 @@ namespace connectivesport
 
 			mAdapter = new MedalAdapter(this.Activity, mMedalList);
 			mRecyclerView.SetAdapter(mAdapter);
+
+			var textViewName = rootView.FindViewById<TextView>(Resource.Id.user_profile_name);
+			var textViewLastActive = rootView.FindViewById<TextView>(Resource.Id.user_profile_last_active);
+
+			textViewName.Text = user.Username;
+			textViewLastActive.Text = user.LastLogin.Value.ToString();
 
 			return rootView;
 		}

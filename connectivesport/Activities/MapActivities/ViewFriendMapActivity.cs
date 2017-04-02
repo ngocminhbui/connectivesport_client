@@ -19,10 +19,13 @@ using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
 
+using Wikitude.Common.Permission;
+using Wikitude.Architect;
+using Android.Content.PM;
 namespace connectivesport
 {
-	[Activity(Label = "connectivesport", MainLauncher = true, Icon = "@mipmap/icon",Theme = "@style/BaseTheme")]
-	public class ViewFriendMapActivity : AppCompatActivity, IOnMapReadyCallback
+	[Activity(Label = "connectivesport", Icon = "@mipmap/icon",Theme = "@style/BaseTheme")]
+	public class ViewFriendMapActivity : AppCompatActivity, IOnMapReadyCallback, IPermissionManagerPermissionManagerCallback
 	{
 		GoogleMap map;
 
@@ -72,6 +75,7 @@ namespace connectivesport
 			if (e.MenuItem.ItemId == Resource.Id.nav_ar)
 			{
 				//start an's AR.
+				ArchitectView.PermissionManager.CheckPermissions(this, new String[] { Android.Manifest.Permission.Camera }, PermissionManager.WikitudePermissionRequest, this);
 				drawerLayout.CloseDrawers();
 
 				return;
@@ -146,6 +150,29 @@ namespace connectivesport
 
 		}
 
+		public void PermissionsDenied(string[] p0)
+		{
+			throw new NotImplementedException();
+		}
 
+		public void PermissionsGranted(int p0)
+		{
+			StartActivity(typeof(ARActivity));
+		}
+
+		public void ShowPermissionRationale(int requestCode, string[] permissions)
+		{
+			ArchitectView.PermissionManager.PositiveRationaleResult(requestCode, permissions);
+		}
+
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+		{
+			int[] result = new int[grantResults.Length];
+			for (int i = 0; i < grantResults.Length; i++)
+			{
+				result[i] = grantResults[i] == Permission.Granted ? 0 : -1;
+			}
+			ArchitectView.PermissionManager.OnRequestPermissionsResult(requestCode, permissions, result);
+		}
 	}
 }

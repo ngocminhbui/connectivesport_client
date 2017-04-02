@@ -22,7 +22,7 @@
             android:id="@+id/textViewSteps"
             android:gravity="center_horizontal"
             android:textSize="30sp"
-            android:text="100" />
+            android:text="312" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:id="@+id/textViewCalories"
             android:gravity="center_horizontal"
             android:textSize="30sp"
-            android:text="100" />
+            android:text="132" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             android:id="@+id/textViewBeat"
             android:textSize="30sp"
             android:gravity="center_horizontal"
-            android:text="100" />
+            android:text="76" />
         <TextView
             android:gravity="center_horizontal"
             android:layout_width="match_parent"

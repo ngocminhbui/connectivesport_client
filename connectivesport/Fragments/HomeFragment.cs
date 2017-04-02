@@ -18,6 +18,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 using Microsoft.Band.Sensors;
 using Microsoft.Band;
+using System.Threading.Tasks;
 
 namespace connectivesport
 {
@@ -28,6 +29,7 @@ namespace connectivesport
 		RecyclerView.LayoutManager mLayoutManager;
 		GoalAdapter mAdapter;
 		List<Goal> mGoalList;
+		List<Challenge> mChallengeList;
 		FloatingActionButton mbutton;
 		TextView txtcalories;
 		TextView txtstep;
@@ -45,7 +47,7 @@ namespace connectivesport
 
 			// Create your fragment here
 			mGoalList = LocalDataManager.instance.lsGoal;
-
+			mChallengeList = LocalDataManager.instance.lsChallenge;
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -75,6 +77,21 @@ namespace connectivesport
 
 				context.StartActivity(intent);
 			});
+
+			mRecyclerViewChallenge.SetLayoutManager(new LinearLayoutManager(this.Activity));
+
+			var adapterChallenge = new ChallengeAdapter(this.Activity, mChallengeList);
+			mRecyclerViewChallenge.SetAdapter(adapterChallenge);
+
+			mRecyclerViewChallenge.SetItemClickListener((rv, position, view) =>
+			{
+				//An item has been clicked
+				Context context = view.Context;
+				Intent intent = new Intent(context, typeof(ChallengeDetailsActivity));
+				intent.PutExtra(ChallengeDetailsActivity.CHALLENGE_ID, mChallengeList[position].Id);
+
+				context.StartActivity(intent);
+			});
 			mbutton = rootView.FindViewById<FloatingActionButton>(Resource.Id.floatingActionButton);
 			mbutton.Click += AddNewGoal;
 				
@@ -95,12 +112,15 @@ namespace connectivesport
 				DistanceSensor sensorDistance = BandConnector.instance.BandClient.SensorManager.CreateDistanceSensor();
 				sensorDistance.ReadingChanged += DistanceSensors_ReadingChanged;
 
-				if (BandConnector.instance.BandClient.SensorManager.CurrentHeartRateConsent != UserConsent.Granted)
-					    BandConnector.instance.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this.Activity).Wait();
-				
+				//if (BandConnector.instance.BandClient.SensorManager.CurrentHeartRateConsent != UserConsent.Granted)
+				//{
+				//	BandConnector.instance.BandClient.SensorManager.RequestHeartRateConsentTaskAsync(this.Activity).Wait();
+				//}
+				//else sensorHeartRate.StartReadings();
+					
 				sensorCalories.StartReadings();
 				sensorDistance.StartReadings();
-				sensorHeartRate.StartReadings();
+
 			}
 		}
 

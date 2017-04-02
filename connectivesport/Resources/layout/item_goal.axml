@@ -24,6 +24,7 @@
             android:layout_weight="3">
             <TextView
                 android:text="Running"
+                android:textStyle="bold"
                 android:maxLines="2"
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
@@ -32,14 +33,6 @@
                 android:id="@+id/textView"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
-            <TextView
-                android:text="My first goal"
-                android:maxLines="2"
-                android:textSize="@dimen/abc_text_size_medium_material"
-                android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp" />
             <TextView
                 android:text="Not completed"
                 android:maxLines="2"
